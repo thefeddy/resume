@@ -1,0 +1,129 @@
+section {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+
+    border-bottom: 1px solid #ceced0;
+
+    align-items: center;
+    justify-content: center;
+
+    .title {
+        display: flex;
+
+        width: 100%;
+    }
+
+    .content {
+        display: flex;
+    }
+
+    aside {
+        font-family: Raleway, sans-serif;
+        font-size: 25px;
+        font-weight: 300;
+
+        width: 40%;
+        margin: 0;
+    }
+
+    .right {
+        position: relative;
+
+        width: 60%;
+        padding-left: 50px;
+
+        border-left: 2px solid #e06b57;
+
+        &::after {
+            position: absolute;
+            top: -4px;
+            left: -5px;
+
+            width: 8px;
+            height: 8px;
+
+            content: '';
+
+            border: 2px solid #272727;
+            border-radius: 50%;
+            background-color: #e5e3e6;
+            box-shadow: 0 0 0 1px #e5e3e6;
+        }
+
+        p {
+            font-family: Raleway, sans-serif;
+            font-size: 25px;
+            font-weight: 300;
+            line-height: 32px;
+
+            margin: 0 0 25px 0;
+
+            b {
+                font-weight: 600;
+
+                display: block;
+
+                margin-bottom: 10px;
+            }
+
+            a {
+                font-weight: 600;
+
+                text-decoration: none;
+
+                color: #3a3935;
+
+                &:hover {
+                    color: #e06b57;
+                }
+            }
+        }
+
+        em {
+            font-family: Raleway, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 32px;
+
+            display: block;
+
+            margin: 0 0 50px 0;
+
+            color: #e06b57;
+        }
+
+        .select {
+            display: inline-block;
+
+            margin: 0 10px;
+
+            cursor: pointer;
+            transition: all 550ms ease-in-out;
+
+            border-bottom: 1px solid #3a3935;
+
+            &:hover {
+                border-color: #e06b57;
+            }
+
+            select {
+                cursor: pointer;
+
+                border: none;
+                outline: none;
+                background: transparent;
+
+                appearance: none;
+            }
+
+            i {
+                pointer-events: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+# David Friedrich 2026 Resume Site. React. Nope.

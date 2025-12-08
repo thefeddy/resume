@@ -1,0 +1,38 @@
+{
+    "name": "resume-site",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "react-router build",
+        "dev": "react-router dev",
+        "start": "set PORT=80 && react-router-serve ./build/server/index.js --host 0.0.0.0",
+        "typecheck": "react-router typegen && tsc"
+    },
+    "dependencies": {
+        "@awesome.me/kit-e8a7262d37": "^1.0.8",
+        "@fortawesome/fontawesome-svg-core": "^7.1.0",
+        "@fortawesome/react-fontawesome": "^3.1.1",
+        "@react-router/node": "^7.5.3",
+        "@react-router/serve": "^7.5.3",
+        "clsx": "^2.1.1",
+        "howler": "^2.2.4",
+        "isbot": "^5.1.27",
+        "mqtt": "^5.14.1",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "react-idle-timer": "^5.7.2",
+        "react-router": "^7.5.3",
+        "react-router-dom": "^7.6.0",
+        "sass": "^1.87.0"
+    },
+    "devDependencies": {
+        "@react-router/dev": "^7.5.3",
+        "@types/howler": "^2.2.12",
+        "@types/node": "^20",
+        "@types/react": "^19.1.2",
+        "@types/react-dom": "^19.1.2",
+        "typescript": "^5.8.3",
+        "vite": "^6.3.3",
+        "vite-tsconfig-paths": "^5.1.4"
+    }
+}
