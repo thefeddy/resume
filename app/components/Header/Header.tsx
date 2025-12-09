@@ -7,7 +7,6 @@ import type { HeaderProps } from './types';
 
 /* Libs */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { byPrefixAndName } from '@awesome.me/kit-e8a7262d37/icons';
 
 /* React */
 import type { JSX } from 'react'
@@ -25,14 +24,15 @@ export default function ResumeHeader({ status }: HeaderProps): JSX.Element {
                     <p>MQTT is <span className={status}>{status}</span></p>
                 </div>
                 <ul>
-                    <li onClick={changeMode}>
-                        {(darkmode) ? (<FontAwesomeIcon icon="fa-duotone fa-solid fa-moon-stars" style={{ color: "#ffffff", }} />) : (<FontAwesomeIcon icon="fa-duotone fa-solid fa-sun-bright" style={{ color: "#ffffff", }} />)}
+                    <li onClick={changeMode} title="Dark Mode">
+                        {(darkmode) ? (<FontAwesomeIcon icon="fa-duotone fa-solid fa-moon-stars" />) : (<FontAwesomeIcon icon="fa-duotone fa-solid fa-sun-bright" />)}
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/fe.dd.y/" className="instagram"><FontAwesomeIcon icon="fa-brands fa-instagram" style={{ color: "#ffffff", }} /></a>
+                        <a href="https://www.instagram.com/fe.dd.y/" title="Instagram" target="_blank"><FontAwesomeIcon icon="fa-brands fa-instagram" /></a>
                     </li>
-                    <li><a href="https://www.linkedin.com/in/david-friedrich-558140b/" className="linkedin"><FontAwesomeIcon icon="fa-brands fa-linkedin" style={{ color: "#ffffff", }} /></a></li>
-                    <li> <a href="https://github.com/thefeddy/" className="github"><FontAwesomeIcon icon="fa-brands fa-github" style={{ color: "#ffffff", }} /></a></li>
+                    <li><a href="https://www.linkedin.com/in/david-friedrich-558140b/" title="LinkedIn" target="_blank"><FontAwesomeIcon icon="fa-brands fa-linkedin" /></a></li>
+                    <li> <a href="https://github.com/thefeddy/" title="GitHub" target="_blank"><FontAwesomeIcon icon="fa-brands fa-github" /></a></li>
+                    <li> <a href="https://github.com/thefeddy/resume" title="Source Code" target="_blank"><FontAwesomeIcon icon="fa-duotone fa-solid fa-code" /></a></li>
                 </ul>
             </nav>
 

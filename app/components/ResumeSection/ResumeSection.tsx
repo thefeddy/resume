@@ -26,7 +26,7 @@ export default function ResumeSection({ id, title, icon, aside, content }: Resum
                 <div className="container">
                     <div className="title">
                         <h1>{title}</h1>
-                        <FontAwesomeIcon icon={icon} size="xl" style={{ color: "#272727", }} />
+                        <FontAwesomeIcon icon={icon} size="2xl" style={{ color: "#272727", }} />
                     </div>
                     <div className="content">
                         <aside>

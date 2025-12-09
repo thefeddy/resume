@@ -7,6 +7,9 @@ import ResumeHeader from '~/components/Header/Header';
 import Intro from '~/components/Intro/Intro';
 import Projects from '~/components/Projects/Projects';
 import Exp from '~/components/Exp/Exp';
+import SplashScreen from '~/components/SplashScreen/SplashScreen';
+import Skills from '~/components/Skills/Skills';
+import Footer from '~/components/Footer/Footer';
 
 /* Font Awesome */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,6 +23,8 @@ import { useGlobal } from '~/states/useGlobal';
 /* Libs */
 import mqtt from 'mqtt';
 import { clsx } from 'clsx';
+
+
 
 
 export function HomeScreen() {
@@ -111,11 +116,14 @@ export function HomeScreen() {
 
     return (
         <>
+            {/* <SplashScreen /> */}
             <main className={clsx({ 'dark-mode': darkmode, section })}>
                 <ResumeHeader status={connectStatus} />
                 <Intro />
                 <Exp />
                 <Projects />
+                <Skills />
+                <Footer />
             </main>
         </>
     );

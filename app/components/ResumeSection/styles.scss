@@ -15,7 +15,14 @@ section {
     .title {
         display: flex;
 
-        width: 100%;
+        width: 30%;
+
+        svg {
+            position: relative;
+            left: 20px;
+
+            margin-left: auto;
+        }
     }
 
     .content {
@@ -27,14 +34,14 @@ section {
         font-size: 25px;
         font-weight: 300;
 
-        width: 40%;
+        width: 30%;
         margin: 0;
     }
 
     .right {
         position: relative;
 
-        width: 60%;
+        width: 70%;
         padding-left: 50px;
 
         border-left: 2px solid #e06b57;

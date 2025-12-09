@@ -11,6 +11,18 @@ nav {
     border-bottom: 1px solid #ceced0;
     background: #e06b57;
 
+    &::after {
+        position: absolute;
+        top: 40px;
+
+        width: 100%;
+        height: 100px;
+
+        content: '';
+
+        backdrop-filter: blur(20px);
+    }
+
     .mqtt {
         display: flex;
 
@@ -47,12 +59,8 @@ nav {
 
             place-content: center;
 
-            i {
-                display: block;
 
-                width: 100%;
-                height: 100%;
-
+            svg {
                 color: #fff !important;
             }
         }
