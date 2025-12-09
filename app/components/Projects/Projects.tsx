@@ -1,10 +1,13 @@
 /* SCSS */
 import './styles.scss'
 
+import projects from '~/assets/json/projects.json';
+
 /* Inteface */
 import ResumeSection from '~/components/ResumeSection/ResumeSection';
 
 /* Libs */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* React */
 import type { JSX } from 'react'
@@ -17,71 +20,33 @@ export default function Projects(): JSX.Element {
     const content = () => (
         <>
             <div className="menu">
-                <ul>
-                    <li>React</li>
-                    <li>Vue3</li>
-                    <li>Angular</li>
-                    <li>WordPress</li>
-                    <li>JavaScript/TypeScript</li>
-                </ul>
+                <div className="type"><FontAwesomeIcon icon="fa-brands fa-js" /></div>
+                <div className="type"><FontAwesomeIcon icon="fa-brands fa-react" /></div>
+                <div className="type"><FontAwesomeIcon icon="fa-brands fa-vuejs" /></div>
+                <div className="type"><FontAwesomeIcon icon="fa-brands fa-angular" /></div>
+                <div className="type"><FontAwesomeIcon icon="fa-brands fa-wordpress" /></div>
+                <div className="type"><FontAwesomeIcon icon="fa-brands fa-node-js" /></div>
             </div>
-            <div className="project">
-                <p>Lively Designer Selfie Station</p>
-                <p>Boeing</p>
-                <span>2024</span>
+            <div className="projects">
+                {projects.map((project) => (
+                    <div className="project" key={project.title}>
+                        <div className="photo">
+                            {project.photo && (<img src={`/assets/img/${project.photo}`} />)}
+                        </div>
+                        <div className="details">
+                            <p>{project.title}</p>
+                            <span>{project.company}</span>
+                        </div>
+                    </div>
+                ))}
             </div>
-            <div className="project">
-                <p>Interactive Health Experiences</p>
-                <p>Advent Health</p>
-                <span>2024 - 2025</span>
-            </div>
-            <div className="project">
-                <p>Halloween Horror Nights</p>
-                <p>Universal Orlando</p>
-                <span>2018 - 2022</span>
-            </div>
-            <div className="project">
-                <p>Mardi Gras Carnival Games</p>
-                <p>Universal Orlando</p>
-                <span>2021</span>
-            </div>
-            <div className="project">
-                <p>The Tour Show Control</p>
-                <p>NBC Universal</p>
-                <span>2022</span>
-            </div>
-            <div className="project">
-                <p>UniSign</p>
-                <p>Universal</p>
-                <span>2024 - </span>
-            </div>
-            <div className="project">
-                <p>Halo Outpost Discovery WordPress</p>
-                <p>343 & Herschend Family Entertainment</p>
-                <span>2019</span>
-            </div>
-            <div className="project">
-                <p>Inclusion Experiences</p>
-                <p>USTA</p>
-                <span>2022</span>
-            </div>
-            <div className="project">
-                <p>SATCOM App</p>
-                <p>Cobham / AAQ / IP Access</p>
-                <span>2015, 2017, 2020</span>
-            </div>
-            <div className="project">
-                <p>Attractions Show Control + Leaderboards</p>
-                <p>Face Amusement</p>
-                <span>2020</span>
-            </div>
-
         </>
     );
 
     const aside = () => (
         <>
             <p>Feel free to look at some of the projects I have worked on over the years.</p>
+            <em>More Projects Details will be added later on.</em>
         </>
     );
 

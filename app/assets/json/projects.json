@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Lively Designer",
+        "company": "Boeing",
+        "photo": "logo-boeing.svg"
+    },
+    {
+        "title": "Interactive Health",
+        "company": "Advent Health",
+        "photo": "logo-adventhealth.svg"
+    },
+    {
+        "title": "Halloween Horror Nights",
+        "company": "Universal Orlando",
+        "photo": "logo-uor.png"
+    },
+    {
+        "title": "Mardi Gras Games",
+        "company": "Universal Orlando",
+        "photo": "logo-uor.png"
+    },
+    {
+        "title": "Tour Show Control",
+        "company": "NBC Universal",
+        "photo": "logo-nbcu.png"
+    },
+    {
+        "title": "UniSign",
+        "company": "Universal",
+        "photo": "logo-uni.png"
+    },
+    {
+        "title": "Tour Site",
+        "company": "Halo Outpost Discovery",
+        "photo": ""
+    },
+    {
+        "title": "Inclusion Experiences",
+        "company": "USTA",
+        "photo": ""
+    },
+    {
+        "title": "SATCOM App",
+        "company": "Cobham / AAQ / IPAccess",
+        "photo": ""
+    },
+    {
+        "title": "Game Show Controls",
+        "company": "Face Amusement",
+        "photo": ""
+    },
+    {
+        "title": "Speakeasy Photobooth",
+        "company": "Celebrity Xcel",
+        "photo": ""
+    },
+    {
+        "title": "Interactives",
+        "company": "Play-Doh",
+        "photo": ""
+    },
+    {
+        "title": "Internal Tools",
+        "company": "Smucker",
+        "photo": ""
+    },
+    {
+        "title": "WordPress",
+        "company": "Baha Mar Resorts",
+        "photo": ""
+    },
+    {
+        "title": "WordPress",
+        "company": "Babcock Ranch",
+        "photo": ""
+    },
+    {
+        "title": "Electron Tour App",
+        "company": "Air Methods",
+        "photo": "logo-air-methods.png"
+    }
+]

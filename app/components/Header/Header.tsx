@@ -40,7 +40,7 @@ export default function ResumeHeader({ status }: HeaderProps): JSX.Element {
                 <div className="container">
                     <div className="name">
                         <h1>David<br /> Friedrich</h1>
-                        <h2>Typescript Developer</h2>
+                        <h2>Javascript Developer</h2>
                     </div>
                     <ul className="information">
                         <li className="looking"><FontAwesomeIcon icon="fa-light fa-chart-user" size="lg" /><span>Looking For Work</span></li>

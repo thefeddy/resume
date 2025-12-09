@@ -20,7 +20,7 @@ export default function Exp(): JSX.Element {
             <div className="jerb">
 
                 <h1>August 2011 - Now</h1>
-                <span>Full Stack Typescript Developer</span>
+                <span>Full Stack Javascript Developer</span>
                 <h2>X Studios, Inc.</h2>
 
                 <p>Helped clients build websites and applications from discovery to launch. Ranging from basic WordPress sites to complex
