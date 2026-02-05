@@ -6,7 +6,7 @@ import path from 'path';
 export default defineConfig({
     base: '/',
     server: {
-        allowedHosts: ['advent.ngrok.dev']
+        allowedHosts: ['']
     },
     plugins: [
         reactRouter(),
