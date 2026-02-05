@@ -21,7 +21,7 @@ export default function ResumeHeader({ status }: HeaderProps): JSX.Element {
         <>
             <nav>
                 <div className="mqtt">
-                    <p>MQTT is <span className={status}>{status}</span></p>
+
                 </div>
                 <ul>
                     <li onClick={changeMode} title="Dark Mode">
