@@ -106,3 +106,22 @@ $types: all, js, vue, angular, react, wordpress, node;
         }
     }
 }
+
+@media (max-width: 768px) {
+    .menu {
+        position: static;
+
+        display: flex;
+
+        transform: none;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+
+        .project {
+            width: 100%;
+            margin: 15px 0;
+        }
+    }
+}
