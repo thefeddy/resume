@@ -27,7 +27,7 @@ $types: all, js, vue, angular, react, wordpress, node;
     .project {
         display: none;
 
-        width: 250px;
+        max-width: 250px;
         height: 100px;
         margin: 15px;
         padding: 10px;
@@ -107,7 +107,7 @@ $types: all, js, vue, angular, react, wordpress, node;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .menu {
         position: static;
 
@@ -120,8 +120,11 @@ $types: all, js, vue, angular, react, wordpress, node;
         grid-template-columns: repeat(2, 1fr);
 
         .project {
-            width: 100%;
             margin: 15px 0;
+
+            &:nth-child(odd) {
+                margin-right: 15px;
+            }
         }
     }
 }
