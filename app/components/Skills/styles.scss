@@ -29,19 +29,13 @@
 }
 
 @media (max-width: 768px) {
-    #skills {
-        .contaienr {
+    .skills {
+        flex-direction: column;
+
+        width: 100%;
+
+        ul {
             width: 100%;
-        }
-
-        .skills {
-            flex-direction: column;
-
-
-
-            ul {
-                width: 100%;
-            }
         }
     }
 }
