@@ -135,3 +135,45 @@ section {
         }
     }
 }
+
+@media (max-width: 768px) {
+    section {
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            aside {
+                width: 100%;
+                padding: 0 !important;
+            }
+
+            .title {
+                svg {
+                    left: 0;
+                }
+            }
+
+            .title,
+            .content {
+                width: 100%;
+            }
+        }
+
+
+        .content {
+            display: flex;
+            flex-direction: column;
+
+            padding-top: 25px;
+
+            .right {
+                width: 100%;
+                padding: 25px 0 0 0;
+
+                border-top: 2px solid #e06b57;
+                border-left: none;
+            }
+        }
+    }
+}

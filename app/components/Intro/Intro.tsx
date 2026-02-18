@@ -10,23 +10,35 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /* React */
 import type { JSX } from 'react'
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Intro(): JSX.Element {
+    const [years, setYears] = useState<number>();
     const NAMES = [
         'David Friedrich', 'David / Dave', 'Friedrich', 'Feddy',
     ]
 
-    const calculateYearDifference = (date1: Date, date2: Date) => {
-        const year1 = date1.getFullYear();
-        const year2 = date2.getFullYear();
-        return Math.abs(year1 - year2);
-    }
+    useEffect(() => {
+        const calculateYearDifference = (start: Date, end: Date) => {
+            let years = end.getFullYear() - start.getFullYear();
 
-    const startDate = new Date('2011-08-10');
+            const hasHadAnniversaryThisYear =
+                end.getMonth() > start.getMonth() ||
+                (end.getMonth() === start.getMonth() && end.getDate() >= start.getDate());
 
-    const endDate = new Date();
-    const years = calculateYearDifference(startDate, endDate);
+            if (!hasHadAnniversaryThisYear) {
+                years--;
+            }
+
+            return Math.max(0, years);
+        }
+
+        const startDate = new Date('2011-08-10');
+        const endDate = new Date();
+
+        setYears(calculateYearDifference(startDate, endDate));
+    }, []);
+
 
     const content = () => (
         <>
@@ -44,7 +56,7 @@ export default function Intro(): JSX.Element {
                     className="_target" title="Current Company">X Studios</a> and looking for new work.
             </p>
 
-            <p>Original from South Jersey,GO BIRDS!, moved to Orlando, FL in 2008 where I
+            <p>Original from South Jersey, <span className="birds">GO BIRDS</span>!, moved to Orlando, FL in 2008 where I
                 graduated from Full Sail Uni, and shortly after started work for X Studios (for {years} years).
             </p>
 
@@ -58,7 +70,7 @@ export default function Intro(): JSX.Element {
             <div className="packagedotjson">
                 <pre>
                     <code>
-                        {'{\n "name": "David Friedrich",\n "title": "Developer", \n "lng": "[\'Javascript\',\'Typescript\']", \n "exp": "14", \n "frmwrks": "[\'React\',\'Vue3\']" \n}'}
+                        {`{\n "name": "David Friedrich",\n "title": "Developer", \n "lng": "[\'Javascript\',\'Typescript\']", \n "exp": "${years}", \n "frmwrks": "[\'React\',\'Vue3\']" \n}`}
                     </code>
                 </pre>
             </div>

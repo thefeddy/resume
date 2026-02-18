@@ -1,12 +1,31 @@
+$types: all, js, vue, angular, react, wordpress, node;
+
 .projects {
     display: grid;
 
+    min-height: 360px;
     padding-bottom: 100px;
 
     grid-template-columns: repeat(3, 1fr);
 
+    @each $type in $types {
+        &.#{$type} {
+            @if $type ==all {
+                .project {
+                    display: flex;
+                }
+            }
+
+            @else {
+                .project[data-type='#{$type}'] {
+                    display: flex;
+                }
+            }
+        }
+    }
+
     .project {
-        display: flex;
+        display: none;
 
         width: 250px;
         height: 100px;
@@ -75,8 +94,15 @@
         width: 30px;
         height: 30px;
 
+        cursor: pointer;
+        transition: filter 550ms ease-in-out;
+
         background: #1f94a8;
 
         place-content: center;
+
+        &:hover {
+            filter: invert(100%);
+        }
     }
 }

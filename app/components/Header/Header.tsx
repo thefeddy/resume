@@ -21,7 +21,7 @@ export default function ResumeHeader({ status }: HeaderProps): JSX.Element {
         <>
             <nav>
                 <div className="mqtt">
-
+                    {/* <p>MQTT is <span className={status}>{status}</span></p> */}
                 </div>
                 <ul>
                     <li onClick={changeMode} title="Dark Mode">
@@ -50,7 +50,7 @@ export default function ResumeHeader({ status }: HeaderProps): JSX.Element {
                                 href="mailto:thefeddy@gmail.com">thefeddy@gmail.com</a></span>
                         </li>
                         <li>
-                            <FontAwesomeIcon icon="fa-light fa-location-crosshairs" size="lg" /><span>Orlando, FL</span>
+                            <FontAwesomeIcon icon="fa-light fa-location-crosshairs" size="lg" /><span>Orlando, FL <strong>(Willing to relocate)</strong></span>
                         </li>
                     </ul>
                 </div>

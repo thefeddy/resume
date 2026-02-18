@@ -1,0 +1,29 @@
+.skills {
+    display: flex;
+    flex-direction: row-reverse;
+
+    align-items: top;
+    justify-content: space-between;
+
+    ul {
+        width: 250px;
+
+        list-style: none;
+
+        h1 {
+            margin-bottom: 25px;
+
+            &::after {
+                left: 0;
+            }
+        }
+
+        p {
+            font-size: 18px;
+
+            margin: 0;
+
+            text-transform: lowercase;
+        }
+    }
+}

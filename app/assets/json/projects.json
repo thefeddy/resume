@@ -2,81 +2,97 @@
     {
         "title": "Lively Designer",
         "company": "Boeing",
-        "photo": "logo-boeing.svg"
+        "photo": "logo-boeing.svg",
+        "type": "node"
     },
     {
         "title": "Interactive Health",
         "company": "Advent Health",
-        "photo": "logo-adventhealth.svg"
+        "photo": "logo-adventhealth.svg",
+        "type": "react"
     },
     {
         "title": "Halloween Horror Nights",
         "company": "Universal Orlando",
-        "photo": "logo-uor.png"
+        "photo": "logo-uor.png",
+        "type": "angular"
     },
     {
         "title": "Mardi Gras Games",
         "company": "Universal Orlando",
-        "photo": "logo-uor.png"
+        "photo": "logo-uor.png",
+        "type": "angular"
     },
     {
         "title": "Tour Show Control",
         "company": "NBC Universal",
-        "photo": "logo-nbcu.png"
+        "photo": "logo-nbcu.png",
+        "type": "vue"
     },
     {
         "title": "UniSign",
         "company": "Universal",
-        "photo": "logo-uni.png"
+        "photo": "logo-uni.png",
+        "type": "vue"
     },
     {
         "title": "Tour Site",
         "company": "Halo Outpost Discovery",
-        "photo": ""
+        "photo": "",
+        "type": "wordpress"
     },
     {
         "title": "Inclusion Experiences",
         "company": "USTA",
-        "photo": ""
+        "photo": "",
+        "type": "js"
     },
     {
         "title": "SATCOM App",
         "company": "Cobham / AAQ / IPAccess",
-        "photo": ""
+        "photo": "",
+        "type": "js"
     },
     {
         "title": "Game Show Controls",
         "company": "Face Amusement",
-        "photo": ""
+        "photo": "",
+        "type": "vue"
     },
     {
         "title": "Speakeasy Photobooth",
         "company": "Celebrity Xcel",
-        "photo": ""
+        "photo": "",
+        "type": "js"
     },
     {
         "title": "Interactives",
         "company": "Play-Doh",
-        "photo": ""
+        "photo": "",
+        "type": "react"
     },
     {
         "title": "Internal Tools",
         "company": "Smucker",
-        "photo": ""
+        "photo": "",
+        "type": "js"
     },
     {
         "title": "WordPress",
         "company": "Baha Mar Resorts",
-        "photo": ""
+        "photo": "",
+        "type": "wordpress"
     },
     {
         "title": "WordPress",
         "company": "Babcock Ranch",
-        "photo": ""
+        "photo": "",
+        "type": "wordpress"
     },
     {
         "title": "Electron Tour App",
         "company": "Air Methods",
-        "photo": "logo-air-methods.png"
+        "photo": "logo-air-methods.png",
+        "type": "js"
     }
 ]
