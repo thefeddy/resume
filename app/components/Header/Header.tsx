@@ -12,17 +12,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { JSX } from 'react'
 import { useGlobal } from '~/states/useGlobal';
 
-export default function ResumeHeader({ status }: HeaderProps): JSX.Element {
+export default function ResumeHeader(): JSX.Element {
     const { darkmode, setDarkmode } = useGlobal();
     const changeMode = () => {
         setDarkmode(!darkmode);
+        localStorage.setItem('darkmode', String(!darkmode));
+
     }
     return (
         <>
             <nav>
-                <div className="mqtt">
-                    {/* <p>MQTT is <span className={status}>{status}</span></p> */}
-                </div>
+
                 <ul>
                     <li onClick={changeMode} title="Dark Mode">
                         {(darkmode) ? (<FontAwesomeIcon icon="fa-duotone fa-solid fa-moon-stars" />) : (<FontAwesomeIcon icon="fa-duotone fa-solid fa-sun-bright" />)}

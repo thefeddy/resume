@@ -15,6 +15,10 @@ main {
         .birds {
             filter: invert(100%) !important;
         }
+
+        .yt-embed {
+            filter: invert(100%) !important;
+        }
     }
 }
 
@@ -23,7 +27,7 @@ section {
 
     border-bottom: 1px solid #ceced0;
 
-    &:nth-child(even) {
+    &:nth-of-type(even) {
         .container {
             transform: scaleX(-1);
 

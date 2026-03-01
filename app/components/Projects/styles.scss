@@ -32,9 +32,19 @@ $types: all, js, vue, angular, react, wordpress, node;
         margin: 15px;
         padding: 10px;
 
+        cursor: not-allowed;
+        user-select: none;
+
         color: #fff;
         border: 1px solid #ceced0;
         background: #3a3935;
+
+        &.has {
+            cursor: help;
+
+            border-width: 2px;
+            border-color: #1f94a8;
+        }
 
         .photo {
             width: 25%;

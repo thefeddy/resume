@@ -15,6 +15,11 @@ export default function Exp(): JSX.Element {
     const { darkmode } = useGlobal();
     const icon = (darkmode) ? 'fa-user-sith' : 'fa-jedi';
 
+    const sounds = {
+        light: 'luke-wont.mp3',
+        dark: 'vader-lack.mp3'
+    }
+
     const content = () => (
         <>
             <div className="jerb">
@@ -39,7 +44,7 @@ export default function Exp(): JSX.Element {
 
     return (
         <>
-            <ResumeSection id="exp" title={`Experience`} icon={`fa-light ${icon}`} content={content()} aside={aside()} />
+            <ResumeSection id="exp" title={`Experience`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
         </>
     );
 }

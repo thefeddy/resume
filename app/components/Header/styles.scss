@@ -11,19 +11,8 @@ nav {
     border-bottom: 1px solid #ceced0;
     background: #e06b57;
 
-    .mqtt {
-        display: flex;
+    justify-content: flex-end;
 
-        margin-right: auto;
-
-        align-items: center;
-
-        p {
-            margin: 0;
-
-            color: #ceced0;
-        }
-    }
 
     ul {
         display: flex;

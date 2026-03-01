@@ -17,7 +17,10 @@ export default function Intro(): JSX.Element {
     const NAMES = [
         'David Friedrich', 'David / Dave', 'Friedrich', 'Feddy',
     ]
-
+    const sounds = {
+        light: 'hello-there.mp3',
+        dark: 'hello-there-og.mp3'
+    }
     useEffect(() => {
         const calculateYearDifference = (start: Date, end: Date) => {
             let years = end.getFullYear() - start.getFullYear();
@@ -53,7 +56,7 @@ export default function Intro(): JSX.Element {
                     <i className="fa-light fa-caret-down"></i>
                 </span>, <br />
                 I am a Senior Javascript Developer currently at <a href="https://xstudios.com"
-                    className="_target" title="Current Company">X Studios</a> and looking for new work.
+                    target="_target" title="Current Company">X Studios</a> and looking for new work.
             </p>
 
             <p>Original from South Jersey, <span className="birds">GO BIRDS</span>!, moved to Orlando, FL in 2008 where I
@@ -79,7 +82,7 @@ export default function Intro(): JSX.Element {
 
     return (
         <>
-            <ResumeSection id="about" title={`Hello! : }`} icon="fa-light fa-messages" content={content()} aside={aside()} />
+            <ResumeSection id="about" title={`Hello! : }`} icon="fa-light fa-messages" content={content()} aside={aside()} sounds={sounds} />
         </>
     );
 }

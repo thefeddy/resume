@@ -9,7 +9,8 @@
         "title": "Interactive Health",
         "company": "Advent Health",
         "photo": "logo-adventhealth.svg",
-        "type": "react"
+        "type": "react",
+        "youtube": "XJOeKY8C7cY"
     },
     {
         "title": "Halloween Horror Nights",
@@ -38,55 +39,56 @@
     {
         "title": "Tour Site",
         "company": "Halo Outpost Discovery",
-        "photo": "",
-        "type": "wordpress"
+        "photo": "logo-halo.png",
+        "type": "wordpress",
+        "content": "<p>Simple WordPress site for Halo : Outpost Discovery interactive experience that ran in 2019. Used Twig and ACF. While the site is no longer running you can see a small preview at <a href=\"https://www.halopedia.org/Halo:_Outpost_Discovery\" target=\"_blank\">halopedia</a> & <a href=\"https://web.archive.org/web/20190801234133/https://halooutpostdiscovery.com/\" target=\"_blank\">web.archive</a></p>."
     },
     {
         "title": "Inclusion Experiences",
         "company": "USTA",
-        "photo": "",
+        "photo": "logo-usta.png",
         "type": "js"
     },
     {
         "title": "SATCOM App",
         "company": "Cobham / AAQ / IPAccess",
-        "photo": "",
+        "photo": "logo-ipaccess.png",
         "type": "js"
     },
     {
         "title": "Game Show Controls",
         "company": "Face Amusement",
-        "photo": "",
+        "photo": "logo-face-amusement.png",
         "type": "vue"
     },
     {
         "title": "Speakeasy Photobooth",
         "company": "Celebrity Xcel",
-        "photo": "",
+        "photo": "logo-celebx.png",
         "type": "js"
     },
     {
         "title": "Interactives",
         "company": "Play-Doh",
-        "photo": "",
+        "photo": "logo-play-doh.png",
         "type": "react"
     },
     {
         "title": "Internal Tools",
         "company": "Smucker",
-        "photo": "",
+        "photo": "logo-smucker.png",
         "type": "js"
     },
     {
         "title": "WordPress",
         "company": "Baha Mar Resorts",
-        "photo": "",
+        "photo": "logo-baha-mar.png",
         "type": "wordpress"
     },
     {
         "title": "WordPress",
         "company": "Babcock Ranch",
-        "photo": "",
+        "photo": "logo-babcock-ranch.png",
         "type": "wordpress"
     },
     {

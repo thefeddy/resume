@@ -8,7 +8,14 @@ import './styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* React */
-import type { JSX, ReactNode } from 'react'
+import { useCallback, useEffect, useRef, useState, type JSX, type ReactNode } from 'react'
+
+import { useGlobal } from '~/states/useGlobal';
+
+type ResumeSoundProps = {
+    light: string,
+    dark: string
+}
 
 type ResumeSectionProps = {
     id: string;
@@ -16,9 +23,32 @@ type ResumeSectionProps = {
     icon: any;
     aside: ReactNode;
     content: ReactNode;
+    sounds: ResumeSoundProps;
 }
 
-export default function ResumeSection({ id, title, icon, aside, content }: ResumeSectionProps): JSX.Element {
+export default function ResumeSection({ id, title, icon, aside, content, sounds }: ResumeSectionProps): JSX.Element {
+    const { darkmode } = useGlobal();
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const play = (sounds: ResumeSoundProps) => {
+        const soundPath = !darkmode ? `light/${sounds.light}` : `dark/${sounds.dark}`;
+        const url = `/assets/sounds/${soundPath}`;
+        const audio = new Audio(url);
+
+        audio.addEventListener('canplaythrough', () => {
+            setIsPlaying(true);
+            if (isPlaying) return;
+
+            audio.currentTime = 0;
+            audio.play().catch(error => {
+                console.error("Playback blocked by browser policy:", error);
+            });
+        }, { once: true });
+
+        audio.onended = () => {
+            setIsPlaying(false);
+        };
+    };
 
     return (
         <>
@@ -26,7 +56,7 @@ export default function ResumeSection({ id, title, icon, aside, content }: Resum
                 <div className="container">
                     <div className="title">
                         <h1>{title}</h1>
-                        <FontAwesomeIcon icon={icon} size="2xl" style={{ color: "#272727", }} />
+                        <FontAwesomeIcon icon={icon} size="2xl" style={{ color: "#272727", }} onClick={() => play(sounds)} />
                     </div>
                     <div className="content">
                         <aside>

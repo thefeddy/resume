@@ -24,6 +24,12 @@
             margin: 0;
 
             text-transform: lowercase;
+
+            strong {
+                font-weight: 700;
+
+                background: #e06b57;
+            }
         }
     }
 }

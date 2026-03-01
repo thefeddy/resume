@@ -12,30 +12,35 @@ import { useGlobal } from '~/states/useGlobal';
 export default function Skills(): JSX.Element {
     const { darkmode } = useGlobal();
     const icon = (darkmode) ? 'fa-swords-laser' : 'fa-sword-laser';
+    const sounds = {
+        light: 'lightsaber.mp3',
+        dark: 'lightsaber.mp3'
+    }
+
     const content = () => (
         <>
             <div className="skills">
                 <ul>
                     <li><h1>Coding</h1></li>
                     <li><p>JAVASCRIPT</p></li>
-                    <li><p>TYPESCRIPT</p></li>
+                    <li><p><strong>TYPESCRIPT</strong></p></li>
                     <li><p>CSS</p></li>
+                    <li><p><strong>SCSS</strong></p></li>
                     <li><p>MQTT</p></li>
-                    <li><p>NODE</p></li>
-                    <li><p>EXPRESS</p></li>
+                    <li><p>NODE / express</p></li>
                 </ul>
                 <ul>
                     <li><h1>FRMWRKs</h1></li>
                     <li><p>VUE3</p></li>
-                    <li><p>REACT</p></li>
+                    <li><p><strong>REACT</strong></p></li>
                     <li><p>NESTJS</p></li>
                     <li><p>ELECTRON</p></li>
                 </ul>
                 <ul>
                     <li><h1>DBs</h1></li>
                     <li><p>MySQL</p></li>
-                    <li><p>POSTGRESQL</p></li>
                     <li><p>MONGODB</p></li>
+                    <li><p><strong>POSTGRESQL</strong></p></li>
                 </ul>
                 <ul>
                     <li><h1>Tools</h1></li>
@@ -47,19 +52,19 @@ export default function Skills(): JSX.Element {
                     <li><p><a href="https://clonezilla.org/" target="_blank">CLONEZILLA</a></p></li>
                     <li><p>FIGMA</p></li>
                 </ul>
-            </div >
+            </div>
         </>
     );
 
     const aside = () => (
         <>
-            <p>My Skill(s)</p>
+            <p>Just a few of the skills, and tools that I use.</p>
         </>
     );
 
     return (
         <>
-            <ResumeSection id="skills" title={`Skills`} icon={`fa-light ${icon}`} content={content()} aside={aside()} />
+            <ResumeSection id="skills" title={`Skills`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
         </>
     );
 }
