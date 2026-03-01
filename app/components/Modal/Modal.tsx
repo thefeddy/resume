@@ -3,8 +3,6 @@ import './styles.scss';
 
 /* React */
 import type { ReactNode, JSX } from 'react';
-import React, { useRef, useEffect } from 'react';
-
 
 /* Libs */
 import clsx from 'clsx';

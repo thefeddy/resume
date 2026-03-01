@@ -1,9 +1,6 @@
 /* SCSS */
-
 import './styles.scss'
 
-/* Inteface */
-import type { HeaderProps } from './types';
 
 /* Libs */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

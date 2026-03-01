@@ -5,12 +5,11 @@ import './styles.scss'
 import ResumeSection from '~/components/ResumeSection/ResumeSection';
 
 /* Libs */
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* React */
 import type { JSX } from 'react'
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Intro(): JSX.Element {
     const [years, setYears] = useState<number>();

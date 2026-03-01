@@ -8,7 +8,7 @@ import './styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* React */
-import { useCallback, useEffect, useRef, useState, type JSX, type ReactNode } from 'react'
+import { useState, type JSX, type ReactNode } from 'react'
 
 import { useGlobal } from '~/states/useGlobal';
 

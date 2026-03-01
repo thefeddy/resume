@@ -19,7 +19,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 
 /* React */
-import { useRef, useState, type JSX } from 'react'
+import { useState, type JSX } from 'react'
 import { useGlobal } from '~/states/useGlobal';
 import Modal from '../Modal/Modal';
 
