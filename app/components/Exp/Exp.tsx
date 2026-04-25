@@ -28,10 +28,10 @@ export default function Exp(): JSX.Element {
                 <span>Senior UI Engineer</span>
                 <h2>X Studios, Inc.</h2>
 
-                <p>Helped clients build websites and applications from discovery to launch. Ranging from basic WordPress sites to complex
-                    Show Control systems for <a href="https://www.thetouratnbcstudios.com/" target="_blank">NBC's The Tour at NBC Studios</a>,
-                    Boeing's Livery Designer Selfie App or
-                    Universal's Halloween Horror Nights Mobile App.</p>
+                <p>
+                    Helped clients build and launch digital products across the full stack. Projects range from
+                    standard web applications to complex hardware-integrated systems, including <a href="https://www.thetouratnbcstudios.com/" target="_blank" rel="noopener noreferrer">NBC's Show Control suite</a>, Boeing's interactive Livery Designer, and the integrated Halloween Horror Nights companion experience within the Universal Orlando mobile app.
+                </p>
             </div>
         </>
     );
