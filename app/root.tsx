@@ -1,7 +1,8 @@
-import "./styles/app.scss";
+import './styles/app.scss';
 
 /* Components */
 
+/* React */
 import {
     isRouteErrorResponse,
     Links,
@@ -13,8 +14,12 @@ import {
 } from "react-router-dom";
 
 import type { Route } from "./+types/root";
-import { GlobalProvider } from "./states/GlobalContext";
 
+/* Global */
+import { GlobalProvider } from "./states/GlobalContext";
+import { useGlobal } from '~/states/useGlobal';
+
+/* Font Awesome */
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { all } from '@awesome.me/kit-e8a7262d37/icons';
 library.add(...all);

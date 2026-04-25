@@ -11,11 +11,12 @@ import { useGlobal } from '~/states/useGlobal';
 
 export default function ResumeHeader(): JSX.Element {
     const { darkmode, setDarkmode } = useGlobal();
+
     const changeMode = () => {
         setDarkmode(!darkmode);
         localStorage.setItem('darkmode', String(!darkmode));
-
     }
+
     return (
         <>
             <nav>
@@ -37,7 +38,7 @@ export default function ResumeHeader(): JSX.Element {
                 <div className="container">
                     <div className="name">
                         <h1>David<br /> Friedrich</h1>
-                        <h2>Javascript Developer</h2>
+                        <h2>UI Systems Engineer</h2>
                     </div>
                     <ul className="information">
                         <li className="looking"><FontAwesomeIcon icon="fa-light fa-chart-user" size="lg" /><span>Looking For Work</span></li>

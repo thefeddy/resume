@@ -5,21 +5,24 @@ import './styles.scss'
 import ResumeSection from '~/components/ResumeSection/ResumeSection';
 
 /* Libs */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* React */
-import type { JSX } from 'react'
+import type { ChangeEvent, JSX } from 'react'
 
 import { useEffect, useState } from 'react';
 
 export default function Intro(): JSX.Element {
     const [years, setYears] = useState<number>();
     const NAMES = [
-        'David Friedrich', 'David / Dave', 'Friedrich', 'Feddy',
+        'David Friedrich', 'David / Dave', 'Feddy',
     ]
     const sounds = {
         light: 'hello-there.mp3',
         dark: 'hello-there-og.mp3'
     }
+    const [name, setName] = useState('David Friedrich');
+
     useEffect(() => {
         const calculateYearDifference = (start: Date, end: Date) => {
             let years = end.getFullYear() - start.getFullYear();
@@ -41,22 +44,30 @@ export default function Intro(): JSX.Element {
         setYears(calculateYearDifference(startDate, endDate));
     }, []);
 
+    const onNameChange = (event: ChangeEvent<HTMLSelectElement>) => {
+
+        setName(event.currentTarget.value)
+    }
 
     const content = () => (
         <>
-            <p><b>Hi. Yes. Hello,</b>
-                My name is
-                <span className="select" title="Just some names I am known by">
-                    <select>
-                        {NAMES.map(name => (
-                            <option key={name}>{name}</option>
-                        ))}
-                    </select>
-                    <i className="fa-light fa-caret-down"></i>
-                </span>, <br />
-                I am a Senior Javascript Developer currently at <a href="https://xstudios.com"
-                    target="_target" title="Current Company">X Studios</a> and looking for new work.
-            </p>
+            <div>
+                <p>
+                    <strong>Hi. Yes. Hello,</strong><br />
+                    My name is
+                    <span className="select">
+                        <select aria-label="Select name display preference" onChange={onNameChange}>
+                            {NAMES.map(name => (
+                                <option key={name}>{name}</option>
+                            ))}
+                        </select>
+                        <FontAwesomeIcon icon="fa-light fa-caret-down" />
+                    </span>,
+                    <br />
+                    I am a Senior UI Enginner currently at <a href="https://xstudios.com"
+                        target="_target" title="Current Company">X Studios</a> and looking for new work.
+                </p>
+            </div>
 
             <p>Original from South Jersey, <span className="birds">GO BIRDS</span>!, moved to Orlando, FL in 2008 where I
                 graduated from Full Sail Uni, and shortly after started work for X Studios (for {years} years).
@@ -72,7 +83,7 @@ export default function Intro(): JSX.Element {
             <div className="packagedotjson">
                 <pre>
                     <code>
-                        {`{\n "name": "David Friedrich",\n "title": "Developer", \n "lng": "[\'Javascript\',\'Typescript\']", \n "exp": "${years}", \n "frmwrks": "[\'React\',\'Vue3\']" \n}`}
+                        {`{\n "name": "${name}",\n "role": "UI Engineer",\n "exp": "${years}y", \n "libs": [\'React\',\'Vue3\'] \n "tech": [\'TS', \'MQTT\']\n}`}
                     </code>
                 </pre>
             </div>
