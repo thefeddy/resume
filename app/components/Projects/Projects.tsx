@@ -61,13 +61,7 @@ export default function Projects(): JSX.Element {
 
     const content = () => (
         <>
-            <Modal
-                isOpen={isModalOpen}
-                onClose={onClose}
-                title={modalContent.title}
-                embedId={modalContent.embedId}
-                body={modalContent.body}
-            />
+
             <div className="menu">
                 <div className="type" onClick={() => menu('all')}>All</div>
                 <div className="type" onClick={() => menu('js')}><FontAwesomeIcon icon="fa-brands fa-js" /></div>
@@ -111,8 +105,16 @@ export default function Projects(): JSX.Element {
 
     return (
         <>
-
-            <ResumeSection id="projects" title={`Work Projects`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
+            <section className="invert-fix">
+                <Modal
+                    isOpen={isModalOpen}
+                    onClose={onClose}
+                    title={modalContent.title}
+                    embedId={modalContent.embedId}
+                    body={modalContent.body}
+                />
+                <ResumeSection id="projects" title={`Work Projects`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
+            </section>
         </>
     );
 }

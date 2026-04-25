@@ -3,14 +3,23 @@
         "title": "Lively Designer",
         "company": "Boeing",
         "photo": "logo-boeing.svg",
-        "type": "node"
+        "type": "node",
+        "content": "<p>Developed a web-based kiosk orchestrating an end-to-end hardware loop. Managed <b>MQTT-based environmental control</b> for a 100\" display, integrated iPad camera capture, and implemented <b>IPP network printing</b> with integrated queue management and hardware error-state handling.</p>"
     },
     {
         "title": "Interactive Health",
         "company": "Advent Health",
         "photo": "logo-adventhealth.svg",
         "type": "react",
-        "youtube": "XJOeKY8C7cY"
+        "content": "<p><b>AdventHealth Interactive Health:</b> Engineered a suite of zero-failure React kiosks for localized LAN deployment. Developed a <b>matrix-driven scoring engine</b> to categorize patient health personas, utilizing <b>local MongoDB</b> for data aggregation and <b>Rive state machines</b> for robust, high-performance animations across multiple hardware orientations.</p>"
+    },
+    {
+        "title": "ADV Flight 2030",
+        "company": "Advent Health",
+        "photo": "logo-adventhealth.svg",
+        "type": "react",
+        "youtube": "XJOeKY8C7cY",
+        "content": "<p> Developed a high-pressure, one-week turnaround video sequencing engine for a multi-screen \"Airplane Window\" environment. Built a <b>manifest-driven playback system</b> with <b>frame-accurate seeking</b> to ensure each independent display was primed to sync with a live guided tour's narrative.</p>"
     },
     {
         "title": "Halloween Horror Nights",
@@ -41,7 +50,7 @@
         "company": "Halo Outpost Discovery",
         "photo": "logo-halo.png",
         "type": "wordpress",
-        "content": "<p>Simple WordPress site for Halo : Outpost Discovery interactive experience that ran in 2019. Used Twig and ACF. While the site is no longer running you can see a small preview at <a href=\"https://www.halopedia.org/Halo:_Outpost_Discovery\" target=\"_blank\">halopedia</a> & <a href=\"https://web.archive.org/web/20190801234133/https://halooutpostdiscovery.com/\" target=\"_blank\">web.archive</a></p>."
+        "content": "<p>Simple WordPress site for Halo : Outpost Discovery interactive experience that ran in 2019. Used Twig and ACF. While the site is no longer running you can see a small preview at <a href=\"https://www.halopedia.org/Halo:_Outpost_Discovery\" target=\"_blank\">halopedia</a> & <a href=\"https://web.archive.org/web/20190801234133/https://halooutpostdiscovery.com/\" target=\"_blank\">web.archive</a>.</p>"
     },
     {
         "title": "Inclusion Experiences",

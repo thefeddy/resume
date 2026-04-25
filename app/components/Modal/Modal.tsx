@@ -27,12 +27,14 @@ export default function Modal({ body, title, isOpen, onClose, embedId }: ModalPr
                 </div>
                 <div className="modal-content">
                     {embedId && (
-                        <iframe
-                            className="yt-embed"
+                        <div className="video">
+                            <iframe
+                                className="yt-embed"
 
-                            src={`https://www.youtube.com/embed/${embedId}`} title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
-                        </iframe>
+                                src={`https://www.youtube.com/embed/${embedId}`} title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
+                            </iframe>
+                        </div>
                     )}
 
                     <div dangerouslySetInnerHTML={{ __html: body }}></div>

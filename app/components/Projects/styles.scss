@@ -117,6 +117,10 @@ $types: all, js, vue, angular, react, wordpress, node;
     }
 }
 
+.invert-fix {
+    position: relative;
+}
+
 @media (max-width: 991px) {
     .menu {
         position: static;
