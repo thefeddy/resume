@@ -25,7 +25,7 @@ export default function Extra(): JSX.Element {
                     <a href="https://www.amazon.com/dp/B08BX5D4LC?binding=hardcover&ref=dbs_m_mng_rwt_sft_thcv_tkin" rel="noopener noreferrer" target="_blank"> Dungeon Crawler Carl</a>
                 </b>, and if I am not doing that I'm either playing video games or 3D printing something.
             </p>
-            <p>While Javascript/Typescript may be my prefered coding language, I am learning new ones. I am currently teaching myself Go + Beego.</p>
+            <p>While Javascript/Typescript may be my prefered coding language, I am always learning new ones. I am currently teaching myself Go + Beego.</p>
             <div className="photos">
                 <a href="/assets/img/personal/3d-printer.jpg" target="_blank">
                     <img src="/assets/img/personal/3d-printer.jpg" alt="Bambu P1S 3D Printer" />
