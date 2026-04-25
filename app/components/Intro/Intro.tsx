@@ -11,8 +11,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { ChangeEvent, JSX } from 'react'
 
 import { useEffect, useState } from 'react';
+import { useGlobal } from '~/states/useGlobal';
 
 export default function Intro(): JSX.Element {
+    const { role } = useGlobal();
+
     const [years, setYears] = useState<number>();
     const NAMES = [
         'David Friedrich', 'David / Dave', 'Feddy',
@@ -64,7 +67,7 @@ export default function Intro(): JSX.Element {
                         <FontAwesomeIcon icon="fa-light fa-caret-down" />
                     </span>,
                     <br />
-                    I am a Senior UI Enginner currently at <a href="https://xstudios.com"
+                    I am a Senior {role} currently at <a href="https://xstudios.com"
                         target="_target" title="Current Company">X Studios</a> and looking for new work.
                 </p>
             </div>
@@ -83,7 +86,7 @@ export default function Intro(): JSX.Element {
             <div className="packagedotjson">
                 <pre>
                     <code>
-                        {`{\n "name": "${name}",\n "role": "UI Engineer",\n "exp": "${years}y", \n "libs": [\'React\',\'Vue3\'] \n "tech": [\'TS', \'MQTT\']\n}`}
+                        {`{\n "name": "${name}",\n "role": "${role}",\n "exp": "${years}y", \n "libs": [\'React\',\'Vue3\'] \n "tech": [\'TS', \'MQTT\']\n}`}
                     </code>
                 </pre>
             </div>

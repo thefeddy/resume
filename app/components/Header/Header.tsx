@@ -10,7 +10,7 @@ import type { JSX } from 'react'
 import { useGlobal } from '~/states/useGlobal';
 
 export default function ResumeHeader(): JSX.Element {
-    const { darkmode, setDarkmode } = useGlobal();
+    const { darkmode, setDarkmode, role } = useGlobal();
 
     const changeMode = () => {
         setDarkmode(!darkmode);
@@ -31,6 +31,7 @@ export default function ResumeHeader(): JSX.Element {
                     <li><a href="https://www.linkedin.com/in/david-friedrich-558140b/" title="LinkedIn" target="_blank"><FontAwesomeIcon icon="fa-brands fa-linkedin" /></a></li>
                     <li> <a href="https://github.com/thefeddy/" title="GitHub" target="_blank"><FontAwesomeIcon icon="fa-brands fa-github" /></a></li>
                     <li> <a href="https://github.com/thefeddy/resume" title="Source Code" target="_blank"><FontAwesomeIcon icon="fa-duotone fa-solid fa-code" /></a></li>
+                    <li><a href="/resume/David_Friedrich_Senior_UI_Engineer_Resume.pdf" title="Resume" target="_blank"><FontAwesomeIcon icon="fa-light fa-file-user" /></a></li>
                 </ul>
             </nav>
 
@@ -38,7 +39,7 @@ export default function ResumeHeader(): JSX.Element {
                 <div className="container">
                     <div className="name">
                         <h1>David<br /> Friedrich</h1>
-                        <h2>UI Systems Engineer</h2>
+                        <h2>{role}</h2>
                     </div>
                     <ul className="information">
                         <li className="looking"><FontAwesomeIcon icon="fa-light fa-chart-user" size="lg" /><span>Looking For Work</span></li>

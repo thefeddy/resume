@@ -2,12 +2,14 @@ import { createContext, type ReactNode, useEffect, useState } from 'react';
 
 interface GlobalContextType {
     darkmode: Boolean;
+    role: String;
     setDarkmode: (stage: boolean) => void;
 
 }
 
 const defaultValue: GlobalContextType = {
     darkmode: true,
+    role: 'UI Enginner',
     setDarkmode: () => { }
 };
 
@@ -20,6 +22,7 @@ interface Props {
 export const GlobalProvider: React.FC<Props> = ({ children }) => {
     const [darkmode, setDarkmode] = useState<boolean>(true);
     const [isMounted, setIsMounted] = useState(false);
+    const [role, setRole] = useState<string>('');
 
     useEffect(() => {
         const savedMode = localStorage.getItem('darkmode');
@@ -31,14 +34,14 @@ export const GlobalProvider: React.FC<Props> = ({ children }) => {
 
     if (!isMounted) {
         return (
-            <GlobalContext.Provider value={{ darkmode: true, setDarkmode: () => { } }}>
+            <GlobalContext.Provider value={{ darkmode: true, setDarkmode: () => { }, role }}>
                 {children}
             </GlobalContext.Provider>
         );
     }
 
     return (
-        <GlobalContext.Provider value={{ darkmode, setDarkmode }}>
+        <GlobalContext.Provider value={{ darkmode, setDarkmode, role }}>
             {children}
         </GlobalContext.Provider>
     );
