@@ -9,7 +9,7 @@ interface GlobalContextType {
 
 const defaultValue: GlobalContextType = {
     darkmode: true,
-    role: 'UI Enginner',
+    role: 'UI Engineer',
     setDarkmode: () => { }
 };
 
@@ -22,7 +22,7 @@ interface Props {
 export const GlobalProvider: React.FC<Props> = ({ children }) => {
     const [darkmode, setDarkmode] = useState<boolean>(true);
     const [isMounted, setIsMounted] = useState(false);
-    const [role, setRole] = useState<string>('');
+    const [role, setRole] = useState<string>('UI Engineer');
 
     useEffect(() => {
         const savedMode = localStorage.getItem('darkmode');
