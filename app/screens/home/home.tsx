@@ -32,7 +32,7 @@ export function HomeScreen() {
                 <Exp />
                 <Projects />
                 <Skills />
-                {/* <Extra /> */}
+                <Extra />
                 <Footer />
             </main>
         </>
