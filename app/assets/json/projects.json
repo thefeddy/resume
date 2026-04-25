@@ -22,35 +22,32 @@
         "content": "<p> Developed a high-pressure, one-week turnaround video sequencing engine for a multi-screen \"Airplane Window\" environment. Built a <b>manifest-driven playback system</b> with <b>frame-accurate seeking</b> to ensure each independent display was primed to sync with a live guided tour's narrative.</p>"
     },
     {
-        "title": "Halloween Horror Nights",
+        "title": "Halloween Horror Nights 2019 - 2022",
         "company": "Universal Orlando",
         "photo": "logo-uor.png",
-        "type": "angular"
+        "type": "angular",
+        "content": "<p> Lead Interactive Engineer for a multi-year suite of in-app experiences. Architected a <b>real-time AR zone-capture game</b> utilizing <b>GPS and MQTT</b> for sub-second synchronization across thousands of concurrent users. Engineered narrative progression systems and <b>QR-driven video modules</b> with persistent state, while managing the <b>Angular integration</b> of custom high-performance components. Delivered a scalable, event-driven architecture using <b>Node.js and Django</b> capable of handling peak seasonal traffic.</p>"
     },
     {
-        "title": "Mardi Gras Games",
-        "company": "Universal Orlando",
-        "photo": "logo-uor.png",
-        "type": "angular"
-    },
-    {
-        "title": "Tour Show Control",
+        "title": "NBC Studios – The Tour Show Control",
         "company": "NBC Universal",
         "photo": "logo-nbcu.png",
-        "type": "vue"
+        "type": "vue",
+        "content": "<p Engineered a high-reliability Show Control suite for <b>The Tour at NBC Studios</b>. I architected a resilient, iPad-based interface utilizing <b>MQTT and WebSockets</b> to deliver sub-millisecond latency for live audio triggers and script timing during production. By migrating legacy workflows to a <b>TypeScript-based architecture</b>, I eliminated synchronization errors between production staff and technical assets, delivering a unified, reactive dashboard optimized for high-pressure, live-tour environments.</p>"
     },
     {
         "title": "UniSign",
         "company": "Universal",
         "photo": "logo-uni.png",
-        "type": "vue"
+        "type": "vue",
+        "content": "<p>Orchestrated the full-scale rewrite of Universal’s internal NDA system from legacy Swift to <b>Vue 3 (Options API)</b>. I implemented a modular, scalable component system utilizing <b>strict TypeScript</b> to ensure long-term type safety and support evolving legal requirements. This migration streamlined the document-signing workflow for thousands of enterprise users, delivering 100% compliance with security standards across multiple global business units.</p>"
     },
     {
         "title": "Tour Site",
         "company": "Halo Outpost Discovery",
         "photo": "logo-halo.png",
         "type": "wordpress",
-        "content": "<p>Simple WordPress site for Halo : Outpost Discovery interactive experience that ran in 2019. Used Twig and ACF. While the site is no longer running you can see a small preview at <a href=\"https://www.halopedia.org/Halo:_Outpost_Discovery\" target=\"_blank\">halopedia</a> & <a href=\"https://web.archive.org/web/20190801234133/https://halooutpostdiscovery.com/\" target=\"_blank\">web.archive</a>.</p>"
+        "content": "<p>Architected the custom digital hub for the <b>Halo: Outpost Discovery</b> touring fan experience. Built with a professional <b>WordPress, Twig, and ACF</b> stack, the platform managed dynamic content and engagement for thousands of attendees across the 2019 multi-city circuit. Archived previews available via <a href=\"https://www.halopedia.org/Halo:_Outpost_Discovery\" target=\"_blank\" rel=\"noopener noreferrer\">Halopedia</a> and <a href=\"https://web.archive.org/web/20190801234133/https://halooutpostdiscovery.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Wayback Machine</a>.</p>"
     },
     {
         "title": "Inclusion Experiences",
@@ -62,7 +59,8 @@
         "title": "SATCOM App",
         "company": "Cobham / AAQ / IPAccess",
         "photo": "logo-ipaccess.png",
-        "type": "js"
+        "type": "js",
+        "content": "<p>Senior Systems Engineer and UI Lead overseeing the <b>full three-generation evolution</b> of satellite antenna control interfaces. I orchestrated a multi-year modernization strategy, transitioning legacy jQuery panels into a high-performance, component-based architecture. To support mission-critical remote deployments, I engineered <b>Node.js gateways</b> for Raspberry Pi hardware, ensuring low-latency hardware-to-UI synchronization and system uptime across every iteration of the platform.</p>"
     },
     {
         "title": "Game Show Controls",
@@ -71,10 +69,11 @@
         "type": "vue"
     },
     {
-        "title": "Speakeasy Photobooth",
+        "title": "Speakeasy Photobooth AI",
         "company": "Celebrity Xcel",
         "photo": "logo-celebx.png",
-        "type": "js"
+        "type": "js",
+        "content": "<p>Led the technical R&D and implementation of a generative AI-powered photobooth for Royal Caribbean. I successfully proposed a custom <b>Stable Diffusion (A1111)</b> filtering system, which expanded the project scope to include 1920s, 1950s, and 1980s styles. I architected a transition to <b>ComfyUI</b> to build a more robust, node-based workflow and oversaw the technical handoff to contractors, ensuring the final output maintained the original vision for high-fidelity, era-specific filtering.</p>"
     },
     {
         "title": "Interactives",
