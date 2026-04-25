@@ -26,11 +26,11 @@ export default function ResumeHeader(): JSX.Element {
                         {(darkmode) ? (<FontAwesomeIcon icon="fa-duotone fa-solid fa-moon-stars" />) : (<FontAwesomeIcon icon="fa-duotone fa-solid fa-sun-bright" />)}
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/fe.dd.y/" title="Instagram" target="_blank"><FontAwesomeIcon icon="fa-brands fa-instagram" /></a>
+                        <a href="https://www.instagram.com/fe.dd.y/" title="Instagram" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon="fa-brands fa-instagram" /></a>
                     </li>
-                    <li><a href="https://www.linkedin.com/in/david-friedrich-558140b/" title="LinkedIn" target="_blank"><FontAwesomeIcon icon="fa-brands fa-linkedin" /></a></li>
-                    <li> <a href="https://github.com/thefeddy/" title="GitHub" target="_blank"><FontAwesomeIcon icon="fa-brands fa-github" /></a></li>
-                    <li> <a href="https://github.com/thefeddy/resume" title="Source Code" target="_blank"><FontAwesomeIcon icon="fa-duotone fa-solid fa-code" /></a></li>
+                    <li><a href="https://www.linkedin.com/in/david-friedrich-558140b/" title="LinkedIn" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon="fa-brands fa-linkedin" /></a></li>
+                    <li> <a href="https://github.com/thefeddy/" title="GitHub" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon="fa-brands fa-github" /></a></li>
+                    <li> <a href="https://github.com/thefeddy/resume" title="Source Code" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon="fa-duotone fa-solid fa-code" /></a></li>
                     <li><a href="/resume/David_Friedrich_Senior_UI_Engineer_Resume.pdf" title="Resume" target="_blank"><FontAwesomeIcon icon="fa-light fa-file-user" /></a></li>
                 </ul>
             </nav>

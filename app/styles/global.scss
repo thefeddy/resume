@@ -19,6 +19,12 @@ main {
         .yt-embed {
             filter: invert(100%) !important;
         }
+
+        #extra {
+            img {
+                filter: invert(100%) !important;
+            }
+        }
     }
 }
 
