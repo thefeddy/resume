@@ -25,7 +25,7 @@ export default function Exp(): JSX.Element {
             <div className="jerb">
 
                 <h1>August 2011 - Now</h1>
-                <span>Full Stack Javascript Developer</span>
+                <span>Senior UI Engineer</span>
                 <h2>X Studios, Inc.</h2>
 
                 <p>Helped clients build websites and applications from discovery to launch. Ranging from basic WordPress sites to complex
@@ -38,7 +38,7 @@ export default function Exp(): JSX.Element {
 
     const aside = () => (
         <>
-            <p>My Jerb(s)</p>
+            <p>My Job(s)</p>
         </>
     );
 
