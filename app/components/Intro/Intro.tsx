@@ -67,16 +67,10 @@ export default function Intro(): JSX.Element {
                         <FontAwesomeIcon icon="fa-light fa-caret-down" />
                     </span>,
                     <br />
-                    I am a Senior {role} currently at <a href="https://xstudios.com"
-                        target="_target" title="Current Company">X Studios</a> and looking for new work.
+                    I&rsquo;ve spent the last 14 years at X Studios evolving from a Full Sail grad into a <b>Senior UI Engineer</b> and Lead Architect.
                 </p>
             </div>
-
-            <p>Original from South Jersey, <span className="birds">GO BIRDS</span>!, moved to Orlando, FL in 2008 where I
-                graduated from Full Sail Uni, and shortly after started work for X Studios (for {years} years).
-            </p>
-
-            <p></p>
+            <p>I&rsquo;m a South Jersey native with a permanent <span className="birds">"Go Birds!"</span> mentality, now living and working in Orlando. After over a decade <b>({years}y)</b> of building award-winning interfaces, I&rsquo;m ready to bring my expertise to a new team and a fresh set of problems.</p>
         </>
     );
 
