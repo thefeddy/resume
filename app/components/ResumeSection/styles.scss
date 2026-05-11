@@ -1,17 +1,4 @@
 section {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-
-    margin: 0 auto;
-    padding: 50px 0 0 0;
-
-    border-bottom: 1px solid #ceced0;
-
-    align-items: center;
-    justify-content: center;
-
     .title {
         display: flex;
 
@@ -30,7 +17,6 @@ section {
     }
 
     aside {
-        font-family: Raleway, sans-serif;
         font-size: 25px;
         font-weight: 300;
 
@@ -45,9 +31,11 @@ section {
         width: 70%;
         padding-left: 50px;
 
-        border-left: 2px solid #e06b57;
+        border-left: 2px solid var(--primary-color);
 
         &::after {
+            font-family: var(--divider-font);
+
             position: absolute;
             top: -4px;
             left: -5px;
@@ -57,14 +45,13 @@ section {
 
             content: '';
 
-            border: 2px solid #272727;
+            border: 2px solid var(--section-divider-border);
             border-radius: 50%;
-            background-color: #e5e3e6;
-            box-shadow: 0 0 0 1px #e5e3e6;
+            background-color: var(--section-divider-bg);
+            box-shadow: 0 0 0 1px var(--section-divider-bg);
         }
 
         p {
-            font-family: Raleway, sans-serif;
             font-size: 25px;
             font-weight: 300;
             line-height: 32px;
@@ -82,22 +69,9 @@ section {
             b {
                 font-weight: 600;
             }
-
-            a {
-                font-weight: 600;
-
-                text-decoration: none;
-
-                color: #3a3935;
-
-                &:hover {
-                    color: #e06b57;
-                }
-            }
         }
 
         em {
-            font-family: Raleway, sans-serif;
             font-size: 12px;
             font-weight: 600;
             line-height: 32px;
@@ -106,7 +80,7 @@ section {
 
             margin: 0 0 50px 0;
 
-            color: #e06b57;
+            color: var(--primary-color);
         }
 
         .select {
@@ -120,7 +94,7 @@ section {
             border-bottom: 1px solid #3a3935;
 
             &:hover {
-                border-color: #e06b57;
+                border-color: var(--primary-color);
             }
 
             select {
@@ -175,7 +149,7 @@ section {
                 width: 100%;
                 padding: 25px 0 0 0;
 
-                border-top: 2px solid #e06b57;
+                border-top: 2px solid var(--primary-color);
                 border-left: none;
             }
         }

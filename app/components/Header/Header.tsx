@@ -10,11 +10,10 @@ import type { JSX } from 'react'
 import { useGlobal } from '~/states/useGlobal';
 
 export default function ResumeHeader(): JSX.Element {
-    const { darkmode, setDarkmode, role } = useGlobal();
+    const { darkmode, toggleDarkMode, role } = useGlobal();
 
     const changeMode = () => {
-        setDarkmode(!darkmode);
-        localStorage.setItem('darkmode', String(!darkmode));
+        toggleDarkMode();
     }
 
     return (

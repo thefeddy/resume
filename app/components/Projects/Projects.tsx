@@ -105,16 +105,16 @@ export default function Projects(): JSX.Element {
 
     return (
         <>
-            <section className="invert-fix">
-                <Modal
-                    isOpen={isModalOpen}
-                    onClose={onClose}
-                    title={modalContent.title}
-                    embedId={modalContent.embedId}
-                    body={modalContent.body}
-                />
-                <ResumeSection id="projects" title={`Work Projects`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
-            </section>
+
+            <Modal
+                isOpen={isModalOpen}
+                onClose={onClose}
+                title={modalContent.title}
+                embedId={modalContent.embedId}
+                body={modalContent.body}
+            />
+            <ResumeSection id="projects" title={`Work Projects`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
+
         </>
     );
 }
