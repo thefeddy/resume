@@ -1,47 +1,45 @@
 import { createContext, type ReactNode, useEffect, useState } from 'react';
 
 interface GlobalContextType {
-    darkmode: Boolean;
-    role: String;
-    setDarkmode: (stage: boolean) => void;
-
+    darkmode: boolean;
+    role: string;
+    toggleDarkMode: () => void; // Easier than passing true/false every time
 }
 
 const defaultValue: GlobalContextType = {
     darkmode: true,
     role: 'UI Engineer',
-    setDarkmode: () => { }
+    toggleDarkMode: () => { }
 };
 
 export const GlobalContext = createContext<GlobalContextType>(defaultValue);
 
-interface Props {
-    children: ReactNode;
-}
+export const GlobalProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
 
-export const GlobalProvider: React.FC<Props> = ({ children }) => {
     const [darkmode, setDarkmode] = useState<boolean>(true);
-    const [isMounted, setIsMounted] = useState(false);
-    const [role, setRole] = useState<string>('UI Engineer');
+    const [role] = useState<string>('UI Engineer');
+
 
     useEffect(() => {
         const savedMode = localStorage.getItem('darkmode');
         if (savedMode !== null) {
             setDarkmode(JSON.parse(savedMode));
         }
-        setIsMounted(true);
     }, []);
 
-    if (!isMounted) {
-        return (
-            <GlobalContext.Provider value={{ darkmode: true, setDarkmode: () => { }, role }}>
-                {children}
-            </GlobalContext.Provider>
-        );
-    }
+
+    useEffect(() => {
+        const root = window.document.documentElement;
+        const theme = darkmode ? 'dark' : 'light';
+
+        root.setAttribute('data-theme', theme);
+        localStorage.setItem('darkmode', JSON.stringify(darkmode));
+    }, [darkmode]);
+
+    const toggleDarkMode = () => setDarkmode(prev => !prev);
 
     return (
-        <GlobalContext.Provider value={{ darkmode, setDarkmode, role }}>
+        <GlobalContext.Provider value={{ darkmode, toggleDarkMode, role }}>
             {children}
         </GlobalContext.Provider>
     );

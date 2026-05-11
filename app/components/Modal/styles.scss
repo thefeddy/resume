@@ -1,5 +1,5 @@
 .modal {
-    position: absolute;
+    position: fixed;
     z-index: 1;
     top: 50%;
     left: 50%;
@@ -11,11 +11,12 @@
     height: 100%;
     padding: 0;
 
-    transition: all 550ms ease-in-out;
+    transition: opacity 550ms ease-in-out, visible 550ms ease-in-out;
     transform: translate(-50%, -50%);
 
     opacity: 0;
 
+    backdrop-filter: blur(20px) saturate(180%);
     place-content: center;
 
     &.open {
@@ -30,7 +31,7 @@
         height: 40px;
 
         border-bottom: 1px solid #ceced0;
-        background: #e06b57;
+        background: var(--primary-color);
 
         align-items: center;
 
@@ -61,7 +62,7 @@
         min-height: 500px;
 
         border: 1px solid #636363;
-        background: #e5e3e6;
+        background: var(--bg-color);
 
         .modal-content {
             padding: 20px;
@@ -80,7 +81,6 @@
 
 
             p {
-                font-family: 'Raleway', sans-serif;
                 font-size: 25px;
                 font-weight: 300;
                 line-height: 32px;
@@ -88,27 +88,6 @@
                 b {
                     font-weight: 700;
                 }
-
-                a {
-                    font-weight: 600;
-
-                    text-decoration: none;
-
-                    color: #3a3935;
-
-                    &:hover {
-                        color: #e06b57;
-                    }
-                }
-            }
-
-            span {
-                font-style: normal;
-
-                text-transform: uppercase;
-
-                opacity: 0.75;
-                color: #1f94a8;
             }
         }
     }
