@@ -91,7 +91,7 @@ section {
             cursor: pointer;
             transition: all 550ms ease-in-out;
 
-            border-bottom: 1px solid #3a3935;
+            border-bottom: 1px solid var(--select-border);
 
             &:hover {
                 border-color: var(--primary-color);
