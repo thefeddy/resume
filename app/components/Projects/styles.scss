@@ -43,7 +43,7 @@ $types: all, js, vue, angular, react, wordpress, node;
             cursor: help;
 
             border-width: 2px;
-            border-color: var(--projects-primary-color);
+            border-color: var(--invert-primary-color);
         }
 
         .photo {
@@ -56,6 +56,7 @@ $types: all, js, vue, angular, react, wordpress, node;
                 width: 100%;
                 height: 100%;
 
+                filter: var(--img-filter);
                 object-fit: contain;
             }
         }
@@ -66,7 +67,7 @@ $types: all, js, vue, angular, react, wordpress, node;
             width: 75%;
             padding-left: 10px;
 
-            border-left: 2px solid var(--projects-primary-color);
+            border-left: 2px solid var(--invert-primary-color);
         }
 
         p {
@@ -90,7 +91,7 @@ $types: all, js, vue, angular, react, wordpress, node;
             text-transform: uppercase;
 
             opacity: 0.75;
-            color: var(--projects-primary-color);
+            color: var(--invert-primary-color);
         }
     }
 }
@@ -111,7 +112,7 @@ $types: all, js, vue, angular, react, wordpress, node;
         cursor: pointer;
         transition: filter 550ms ease-in-out;
 
-        background: var(--projects-primary-color);
+        background: var(--invert-primary-color);
 
         place-content: center;
 

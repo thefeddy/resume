@@ -4,15 +4,17 @@
     --divider-font: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
     --header-bottom: #ceced0;
     --header-divider: #272727;
+    --img-filter: invert(100%);
+    --invert-primary-color: #1f94a8;
     --link-color: #3a3935;
     --primary-color: #e06b57;
     --projects-bg-color: #3a3935;
-    --projects-primary-color: #1f94a8;
     --projects-text-color: #c5c6ca;
     --section-bottom: #ceced0;
     --section-divider-bg: #e5e3e6;
     --section-divider-border: #272727;
-    --text-color: #1a1a1a;
+    --select-border: #1a1a1a;
+    --text-color: #3a3935;
 }
 
 :root[data-theme='dark'] {
@@ -22,24 +24,19 @@
     --footer-border-top: #31312f;
     --header-bottom: #31312f;
     --header-divider: #d8d8d8;
+    --img-filter: invert(0%);
+    --invert-primary-color: #e06b57;
     --link-color: #c5c6ca;
     --primary-color: #1f94a8;
     --projects-bg-color: #e5e3e6;
-    --projects-primary-color: #e06b57;
     --projects-text-color: #1a1a1a;
     --section-bottom: #31312f;
     --section-divider-bg: #1a1c19;
     --section-divider-border: #d8d8d8;
+    --select-border: #d8d8d8;
     --text-color: #c5c6ca;
 }
 
-:root .projects .project .photo img {
-    filter: invert(100%);
-}
-
-:root[data-theme='dark'] .projects .project .photo img {
-    filter: invert(0%);
-}
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -67,6 +64,19 @@ body {
     svg {
         color: var(--text-color) !important;
     }
+
+    select {
+        color: var(--text-color);
+    }
+}
+
+* {
+    scrollbar-color: var(--primary-color) var(--invert-primary-color);
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
 }
 
 main {
