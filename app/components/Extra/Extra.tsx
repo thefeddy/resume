@@ -1,18 +1,43 @@
 /* SCSS */
 import './styles.scss'
 
-/* Inteface */
+/* Component */
 import ResumeSection from '~/components/ResumeSection/ResumeSection';
+import Modal from '../Modal/Modal';
 
-/* Libs */
+/* Inteface */
+import type { ModalState } from '../Modal/type/modal';
 
 /* React */
-import type { JSX } from 'react'
+import { useState, type JSX } from 'react'
 import { useGlobal } from '~/states/useGlobal';
 
 export default function Extra(): JSX.Element {
     const { darkmode } = useGlobal();
     const icon = (darkmode) ? 'fa-swords-laser' : 'fa-sword-laser';
+
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const [modalContent, setModalContent] = useState<ModalState>({
+        title: 'image',
+        type: '',
+        image: ''
+    });
+
+    const modal = (title: string, image: string) => {
+
+        setIsModalOpen(true);
+        setModalContent({
+            type: 'image',
+            title,
+            image
+        });
+
+    }
+
+    const onClose = () => {
+        setIsModalOpen(false)
+
+    }
 
     const sounds = {
         light: 'lightsaber.mp3',
@@ -27,15 +52,15 @@ export default function Extra(): JSX.Element {
             </p>
             <p>While Javascript/Typescript may be my prefered coding language, I am always learning new ones. I am currently teaching myself Go + Beego.</p>
             <div className="photos">
-                <a href="/assets/img/personal/3d-printer.jpg" target="_blank">
+                <div className="photo" onClick={() => modal('P1S Printer', '/assets/img/personal/3d-printer.jpg')} >
                     <img src="/assets/img/personal/3d-printer.jpg" alt="Bambu P1S 3D Printer" />
-                </a>
-                <a href="/assets/img/personal/computer.jpg" target="_blank">
+                </div>
+                <div className="photo" onClick={() => modal('My Computah', '/assets/img/personal/computer.jpg')} >
                     <img src="/assets/img/personal/computer.jpg" alt="My machine" />
-                </a>
-                <a href="/assets/img/personal/books.jpg" target="_blank">
+                </div>
+                <div className="photo" onClick={() => modal('Just some books', '/assets/img/personal/books.jpg')} >
                     <img src="/assets/img/personal/books.jpg" alt="Some of my books" />
-                </a>
+                </div>
             </div>
         </>
     );
@@ -43,12 +68,18 @@ export default function Extra(): JSX.Element {
     const aside = () => (
         <>
             <p>You kept going?!? Fine, here's a little more about myself</p>
-
         </>
     );
 
     return (
         <>
+            <Modal
+                isOpen={isModalOpen}
+                onClose={onClose}
+                title={modalContent.title}
+                image={modalContent.image}
+                type="image"
+            />
             <ResumeSection id="extra" title={`Extra, Extra!`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
         </>
     );

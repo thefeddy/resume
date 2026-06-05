@@ -19,6 +19,16 @@
     backdrop-filter: blur(20px) saturate(180%);
     place-content: center;
 
+    &.image {
+        .modal-content {
+            text-align: center;
+        }
+
+        img {
+            width: 67%;
+        }
+    }
+
     &.open {
         visibility: visible;
 
@@ -59,7 +69,6 @@
 
         width: 100%;
         max-width: 800px;
-        min-height: 500px;
 
         border: 1px solid #636363;
         background: var(--bg-color);

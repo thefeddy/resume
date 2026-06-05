@@ -3,16 +3,12 @@ import './styles.scss'
 
 import projects from '~/assets/json/projects.json';
 
-
 /* Components */
 import ResumeSection from '~/components/ResumeSection/ResumeSection';
+import Modal from '../Modal/Modal';
 
 /* Inteface */
-type ModalState = {
-    embedId: any;
-    title: string;
-    body: any;
-};
+import type { ModalState } from '../Modal/type/modal';
 
 /* Libs */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,7 +17,8 @@ import clsx from 'clsx';
 /* React */
 import { useState, type JSX } from 'react'
 import { useGlobal } from '~/states/useGlobal';
-import Modal from '../Modal/Modal';
+
+
 
 
 export default function Projects(): JSX.Element {
@@ -30,7 +27,8 @@ export default function Projects(): JSX.Element {
     const [modalContent, setModalContent] = useState<ModalState>({
         body: '',
         embedId: '',
-        title: ''
+        title: '',
+        type: ''
     });
     const { darkmode } = useGlobal();
 
@@ -53,8 +51,8 @@ export default function Projects(): JSX.Element {
             setModalContent({
                 body: projects[index]?.content,
                 title: projects[index].title,
-                embedId: projects[index].youtube
-
+                embedId: projects[index].youtube,
+                type: 'project'
             });
         }
     }
@@ -112,6 +110,7 @@ export default function Projects(): JSX.Element {
                 title={modalContent.title}
                 embedId={modalContent.embedId}
                 body={modalContent.body}
+                type="project"
             />
             <ResumeSection id="projects" title={`Work Projects`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
 
