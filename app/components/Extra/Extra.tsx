@@ -11,25 +11,26 @@ import type { ModalState } from '../Modal/type/modal';
 /* React */
 import { useState, type JSX } from 'react'
 import { useGlobal } from '~/states/useGlobal';
+import type { Content } from '~/type/content.type';
 
 export default function Extra(): JSX.Element {
     const { darkmode } = useGlobal();
     const icon = (darkmode) ? 'fa-swords-laser' : 'fa-sword-laser';
 
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-    const [modalContent, setModalContent] = useState<ModalState>({
+    const [modalContent, setModalContent] = useState<Content>({
         title: 'image',
         type: '',
-        image: ''
+        photo: ''
     });
 
-    const modal = (title: string, image: string) => {
+    const modal = (title: string, photo: string) => {
 
         setIsModalOpen(true);
         setModalContent({
             type: 'image',
             title,
-            image
+            photo
         });
 
     }
@@ -76,8 +77,7 @@ export default function Extra(): JSX.Element {
             <Modal
                 isOpen={isModalOpen}
                 onClose={onClose}
-                title={modalContent.title}
-                image={modalContent.image}
+                content={modalContent}
                 type="image"
             />
             <ResumeSection id="extra" title={`Extra, Extra!`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />

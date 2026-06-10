@@ -7,8 +7,6 @@ import projects from '~/assets/json/projects.json';
 import ResumeSection from '~/components/ResumeSection/ResumeSection';
 import Modal from '../Modal/Modal';
 
-/* Inteface */
-import type { ModalState } from '../Modal/type/modal';
 
 /* Libs */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,6 +15,7 @@ import clsx from 'clsx';
 /* React */
 import { useState, type JSX } from 'react'
 import { useGlobal } from '~/states/useGlobal';
+import type { Content } from '~/type/content.type';
 
 
 
@@ -24,12 +23,7 @@ import { useGlobal } from '~/states/useGlobal';
 export default function Projects(): JSX.Element {
     const [projectType, setProjectType] = useState<string>('all');
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-    const [modalContent, setModalContent] = useState<ModalState>({
-        body: '',
-        embedId: '',
-        title: '',
-        type: ''
-    });
+    const [modalContent, setModalContent] = useState<Content>();
     const { darkmode } = useGlobal();
 
     const icon = (darkmode) ? 'fa-starfighter-twin-ion-engine' : 'fa-starfighter';
@@ -46,14 +40,10 @@ export default function Projects(): JSX.Element {
     }
 
     const modal = (index: number) => {
-        if (projects[index]?.content) {
+        if (projects[index]?.body) {
+            console.log(typeof projects[index])
             setIsModalOpen(true);
-            setModalContent({
-                body: projects[index]?.content,
-                title: projects[index].title,
-                embedId: projects[index].youtube,
-                type: 'project'
-            });
+            setModalContent(projects[index]);
         }
     }
 
@@ -72,7 +62,7 @@ export default function Projects(): JSX.Element {
             <div className={clsx('projects', projectType)} >
                 {projects.map((project, index) => (
                     <div
-                        className={clsx('project', { 'has': project.content })}
+                        className={clsx('project', { 'has': project.body })}
                         key={index}
                         data-type={project?.type}
                         onClick={() => modal(index)}>
@@ -107,9 +97,7 @@ export default function Projects(): JSX.Element {
             <Modal
                 isOpen={isModalOpen}
                 onClose={onClose}
-                title={modalContent.title}
-                embedId={modalContent.embedId}
-                body={modalContent.body}
+                content={modalContent}
                 type="project"
             />
             <ResumeSection id="projects" title={`Work Projects`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
