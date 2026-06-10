@@ -163,7 +163,7 @@ $types: all, js, vue, angular, react, wordpress, node;
     .menu {
         position: static;
 
-        display: flex;
+        display: inline-flex;
 
         transform: none;
     }

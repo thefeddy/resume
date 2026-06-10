@@ -20,14 +20,18 @@ export default function Skills(): JSX.Element {
     const content = () => (
         <>
             <div className="skills">
+
                 <ul>
-                    <li><h1>Coding</h1></li>
+                    <li><h1>Dev &amp; DBs</h1></li>
                     <li><p>JAVASCRIPT</p></li>
                     <li><p><strong>TYPESCRIPT</strong></p></li>
                     <li><p>CSS</p></li>
                     <li><p><strong>SCSS</strong></p></li>
                     <li><p>MQTT</p></li>
                     <li><p>NODE / express</p></li>
+                    <li><p>MySQL</p></li>
+                    <li><p>MONGODB</p></li>
+                    <li><p><strong>POSTGRESQL</strong></p></li>
                 </ul>
                 <ul>
                     <li><h1>FRMWRKs</h1></li>
@@ -35,12 +39,6 @@ export default function Skills(): JSX.Element {
                     <li><p><strong>REACT</strong></p></li>
                     <li><p>NESTJS</p></li>
                     <li><p>ELECTRON</p></li>
-                </ul>
-                <ul>
-                    <li><h1>DBs</h1></li>
-                    <li><p>MySQL</p></li>
-                    <li><p>MONGODB</p></li>
-                    <li><p><strong>POSTGRESQL</strong></p></li>
                 </ul>
                 <ul>
                     <li><h1>Tools</h1></li>
@@ -52,6 +50,7 @@ export default function Skills(): JSX.Element {
                     <li><p><a href="https://clonezilla.org/" target="_blank">CLONEZILLA</a></p></li>
                     <li><p>FIGMA</p></li>
                 </ul>
+
             </div>
         </>
     );

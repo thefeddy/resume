@@ -10,7 +10,8 @@ import {
     Outlet,
     Scripts,
     ScrollRestoration,
-    useRouteError, useParams
+    useRouteError, useParams,
+    NavLink
 } from "react-router-dom";
 
 import type { Route } from "./+types/root";
@@ -89,7 +90,7 @@ export function ErrorBoundary() {
             <main id="four-oh-four">
                 <h1>{message}</h1>
                 <p>{details}</p>
-                <a href="/">Go back!</a>
+                <NavLink to="/"><button>Back</button></NavLink>
             </main>
         </>
     );
