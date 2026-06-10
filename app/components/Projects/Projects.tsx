@@ -41,7 +41,6 @@ export default function Projects(): JSX.Element {
 
     const modal = (index: number) => {
         if (projects[index]?.body) {
-            console.log(typeof projects[index])
             setIsModalOpen(true);
             setModalContent(projects[index]);
         }
@@ -88,7 +87,6 @@ export default function Projects(): JSX.Element {
 
     const onClose = () => {
         setIsModalOpen(false)
-
     }
 
     return (
