@@ -6,4 +6,5 @@ export interface Content {
     body?: string;
     company?: string;
     photo?: string;
+    tech?: string[];
 }

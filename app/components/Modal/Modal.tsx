@@ -67,7 +67,18 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
                                     ></iframe>
                                 </div>
                             )}
-                            <div>{content?.body ? parse(content.body) : null}</div>
+                            <div>
+                                {content?.body ? parse(content.body) : null}
+                                {content?.tech && (
+                                    <div className="list">
+                                        {content.tech.map((item, index) => (
+                                            <div className="tech" key={index}>
+                                                {item}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
                             {totalImages > 0 && (
                                 <div className={clsx('images-wrapper', { expanded: isExpanded })}>
                                     <button className="prev" onClick={prevSlide}>

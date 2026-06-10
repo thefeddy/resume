@@ -4,7 +4,13 @@
         "company": "Boeing",
         "photo": "logo-boeing.svg",
         "type": "node",
-        "body": "<p>Developed a web-based kiosk orchestrating an end-to-end hardware loop. Managed <strong>MQTT-based environmental control</strong> for a 100\" display, integrated iPad camera capture, and implemented <strong>IPP network printing</strong> with integrated queue management and hardware error-state handling.</p>"
+        "body": "<p>Developed a web-based kiosk orchestrating an end-to-end hardware loop. Managed <strong>MQTT-based environmental control</strong> for a 100\" display, integrated iPad camera capture, and implemented <strong>IPP network printing</strong> with integrated queue management and hardware error-state handling.</p>",
+        "tech": [
+            "vue3",
+            "mqtt",
+            "ipp",
+            "typescript"
+        ]
     },
     {
         "title": "Interactive Health",
@@ -16,6 +22,12 @@
             "projects/adventhealth/IMG_9664.jpg",
             "projects/adventhealth/IMG_9665.jpg",
             "projects/adventhealth/IMG_9688.jpg"
+        ],
+        "tech": [
+            "react",
+            "mongodb",
+            "rive",
+            "typescript"
         ]
     },
     {
@@ -24,35 +36,63 @@
         "photo": "logo-adventhealth.svg",
         "type": "react",
         "youtube": "XJOeKY8C7cY",
-        "body": "<p> Developed a high-pressure, one-week turnaround video sequencing engine for a multi-screen \"Airplane Window\" environment. Built a <strong>manifest-driven playback system</strong> with <strong>frame-accurate seeking</strong> to ensure each independent display was primed to sync with a live guided tour's narrative.</p>"
+        "body": "<p>Developed a high-pressure, one-week turnaround video sequencing engine for a multi-screen \"Airplane Window\" environment. Built a <strong>manifest-driven playback system</strong> with <strong>frame-accurate seeking</strong> to ensure each independent display was primed to sync with a live guided tour's narrative.</p>",
+        "tech": [
+            "react",
+            "typescript"
+        ]
     },
     {
         "title": "Halloween Horror Nights 2019 - 2022",
         "company": "Universal Orlando",
         "photo": "logo-uor.png",
         "type": "angular",
-        "body": "<p> Lead Interactive Engineer for a multi-year suite of in-app experiences. Architected a <strong>real-time AR zone-capture game</strong> utilizing <strong>GPS and MQTT</strong> for sub-second synchronization across thousands of concurrent users. Engineered narrative progression systems and <strong>QR-driven video modules</strong> with persistent state, while managing the <strong>Angular integration</strong> of custom high-performance components. Delivered a scalable, event-driven architecture using <strong>Node.js and Django</strong> capable of handling peak seasonal traffic.</p>"
+        "body": "<p> Lead Interactive Engineer for a multi-year suite of in-app experiences. Architected a <strong>real-time AR zone-capture game</strong> utilizing <strong>GPS and MQTT</strong> for sub-second synchronization across thousands of concurrent users. Engineered narrative progression systems and <strong>QR-driven video modules</strong> with persistent state, while managing the <strong>Angular integration</strong> of custom high-performance components. Delivered a scalable, event-driven architecture using <strong>Node.js and Django</strong> capable of handling peak seasonal traffic.</p>",
+        "tech": [
+            "angular",
+            "nodejs",
+            "typescript",
+            "8th wall"
+        ]
     },
     {
         "title": "NBC Studios – The Tour Show Control",
         "company": "NBC Universal",
         "photo": "logo-nbcu.png",
         "type": "vue",
-        "body": "<p Engineered a high-reliability Show Control suite for <strong>The Tour at NBC Studios</strong>. I architected a resilient, iPad-based interface utilizing <strong>MQTT and WebSockets</strong> to deliver sub-millisecond latency for live audio triggers and script timing during production. By migrating legacy workflows to a <strong>TypeScript-based architecture</strong>, I eliminated synchronization errors between production staff and technical assets, delivering a unified, reactive dashboard optimized for high-pressure, live-tour environments.</p>"
+        "body": "<p>Engineered a high-reliability Show Control suite for <strong>The Tour at NBC Studios</strong>. I architected a resilient, iPad-based interface utilizing <strong>MQTT and WebSockets</strong> to deliver sub-millisecond latency for live audio triggers and script timing during production. By migrating legacy workflows to a <strong>TypeScript-based architecture</strong>, I eliminated synchronization errors between production staff and technical assets, delivering a unified, reactive dashboard optimized for high-pressure, live-tour environments.</p>",
+        "tech": [
+            "vue3",
+            "mqtt"
+        ]
     },
     {
         "title": "UniSign",
         "company": "Universal",
         "photo": "logo-uni.png",
         "type": "vue",
-        "body": "<p>Orchestrated the full-scale rewrite of Universal’s internal NDA system from legacy Swift to <strong>Vue 3 (Options API)</strong>. I implemented a modular, scalable component system utilizing <strong>strict TypeScript</strong> to ensure long-term type safety and support evolving legal requirements. This migration streamlined the document-signing workflow for thousands of enterprise users, delivering 100% compliance with security standards across multiple global business units.</p>"
+        "body": "<p>Orchestrated the full-scale frontend rewrite of Universal’s internal NDA system from legacy Swift to <strong>Vue 3 (Options API)</strong> and strict <strong>TypeScript</strong>, subsequently expanding ownership to full-tech development. Currently manage the entire ecosystem, including UI/UX design and the <strong>Python (Django)</strong> / <strong>PostgreSQL</strong> backend. This end-to-end modernization streamlined the document-signing workflow for thousands of global enterprise users while maintaining 100% compliance with security standards.</p>",
+        "tech": [
+            "vue3",
+            "mqtt",
+            "typescript",
+            "django",
+            "python",
+            "PostgreSQL"
+        ]
     },
     {
         "title": "Tour Site",
         "company": "Halo Outpost Discovery",
         "photo": "logo-halo.png",
         "type": "wordpress",
-        "body": "<p>Architected the custom digital hub for the <strong>Halo: Outpost Discovery</strong> touring fan experience. Built with a professional <strong>WordPress, Twig, and ACF</strong> stack, the platform managed dynamic body and engagement for thousands of attendees across the 2019 multi-city circuit. Archived previews available via <a href=\"https://www.halopedia.org/Halo:_Outpost_Discovery\" target=\"_blank\" rel=\"noopener noreferrer\">Halopedia</a> and <a href=\"https://web.archive.org/web/20190801234133/https://halooutpostdiscovery.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Wayback Machine</a>.</p>"
+        "body": "<p>Architected the custom digital hub for the <strong>Halo: Outpost Discovery</strong> touring fan experience. Built with a professional <strong>WordPress, Twig, and ACF</strong> tech, the platform managed dynamic body and engagement for thousands of attendees across the 2019 multi-city circuit. Archived previews available via <a href=\"https://www.halopedia.org/Halo:_Outpost_Discovery\" target=\"_blank\" rel=\"noopener noreferrer\">Halopedia</a> and <a href=\"https://web.archive.org/web/20190801234133/https://halooutpostdiscovery.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Wayback Machine</a>.</p>",
+        "tech": [
+            "php",
+            "twig",
+            "wordpress",
+            "acf"
+        ]
     },
     {
         "title": "Inclusion Experiences",
@@ -78,7 +118,12 @@
         "company": "Celebrity Xcel",
         "photo": "logo-celebx.png",
         "type": "js",
-        "body": "<p>Led the technical R&D and implementation of a generative AI-powered photobooth for Royal Caribbean. I successfully proposed a custom <strong>Stable Diffusion (A1111)</strong> filtering system, which expanded the project scope to include 1920s, 1950s, and 1980s styles. I architected a transition to <strong>ComfyUI</strong> to build a more robust, node-based workflow and oversaw the technical handoff to contractors, ensuring the final output maintained the original vision for high-fidelity, era-specific filtering.</p>"
+        "body": "<p>Led the technical R&D and implementation of a generative AI-powered photobooth for Royal Caribbean. I successfully proposed a custom <strong>Stable Diffusion (A1111)</strong> filtering system, which expanded the project scope to include 1920s, 1950s, and 1980s styles. I architected a transition to <strong>ComfyUI</strong> to build a more robust, node-based workflow and oversaw the technical handoff to contractors, ensuring the final output maintained the original vision for high-fidelity, era-specific filtering.</p>",
+        "tech": [
+            "comfyui",
+            "stable diffusion",
+            "websockets"
+        ]
     },
     {
         "title": "Interactives",

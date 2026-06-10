@@ -80,7 +80,7 @@ export default function Intro(): JSX.Element {
             <div className="packagedotjson">
                 <pre>
                     <code>
-                        {`{\n "name": "${name}",\n "role": "${role}",\n "exp": "${years}y", \n "libs": [\'React\',\'Vue3\'] \n "tech": [\'TS', \'MQTT\']\n}`}
+                        {`{\n "name": "${name}",\n "role": "${role}",\n "exp": "${years}y", \n "libs": [\'React\'] \n "tech": [\'TS', \'MQTT\']\n}`}
                     </code>
                 </pre>
             </div>

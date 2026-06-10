@@ -17,17 +17,45 @@ import { useState, type JSX } from 'react'
 import { useGlobal } from '~/states/useGlobal';
 import type { Content } from '~/type/content.type';
 
-
-
+const MENU_CONFIG = [
+    {
+        name: 'all',
+        icon: ''
+    },
+    {
+        name: 'js',
+        icon: 'fa-brands fa-js'
+    },
+    {
+        name: 'react',
+        icon: 'fa-brands fa-react'
+    },
+    {
+        name: 'vue',
+        icon: 'fa-brands fa-vuejs'
+    },
+    {
+        name: 'angular',
+        icon: 'fa-brands fa-angular'
+    },
+    {
+        name: 'wordpress',
+        icon: 'fa-brands fa-wordpress'
+    },
+    {
+        name: 'node',
+        icon: 'fa-brands fa-node-js'
+    }
+]
 
 export default function Projects(): JSX.Element {
     const [projectType, setProjectType] = useState<string>('all');
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [modalContent, setModalContent] = useState<Content>();
+
     const { darkmode } = useGlobal();
 
     const icon = (darkmode) ? 'fa-starfighter-twin-ion-engine' : 'fa-starfighter';
-
 
     const sounds = {
         light: 'x-wing.mp3',
@@ -36,11 +64,11 @@ export default function Projects(): JSX.Element {
 
     const menu = (type: string) => {
         setProjectType(type);
-
     }
 
     const modal = (index: number) => {
         if (projects[index]?.body) {
+
             setIsModalOpen(true);
             setModalContent(projects[index]);
         }
@@ -48,16 +76,28 @@ export default function Projects(): JSX.Element {
 
     const content = () => (
         <>
-
             <div className="menu">
-                <div className="type" onClick={() => menu('all')}>All</div>
-                <div className="type" onClick={() => menu('js')}><FontAwesomeIcon icon="fa-brands fa-js" /></div>
-                <div className="type" onClick={() => menu('react')}><FontAwesomeIcon icon="fa-brands fa-react" /></div>
-                <div className="type" onClick={() => menu('vue')}><FontAwesomeIcon icon="fa-brands fa-vuejs" /></div>
-                <div className="type" onClick={() => menu('angular')}><FontAwesomeIcon icon="fa-brands fa-angular" /></div>
-                <div className="type" onClick={() => menu('wordpress')}><FontAwesomeIcon icon="fa-brands fa-wordpress" /></div>
-                <div className="type" onClick={() => menu('node')}><FontAwesomeIcon icon="fa-brands fa-node-js" /></div>
+                {MENU_CONFIG.map((item) => {
+                    const isActive = projectType === item.name;
+                    return (
+                        <div className={clsx('type', { active: isActive })}
+                            onClick={() => menu(item.name)}
+                            key={item.name}
+                            data-tooltip={item.name}
+                            aria-label={item.name}
+                            aria-pressed={isActive}
+                        >
+                            {item.icon != '' ? (
+                                <FontAwesomeIcon icon={item.icon} />
+                            ) :
+                                (
+                                    <>{item.name}</>
+                                )
+                            }
+                        </div>)
+                })}
             </div>
+
             <div className={clsx('projects', projectType)} >
                 {projects.map((project, index) => (
                     <div
@@ -91,7 +131,6 @@ export default function Projects(): JSX.Element {
 
     return (
         <>
-
             <Modal
                 isOpen={isModalOpen}
                 onClose={onClose}
@@ -99,7 +138,6 @@ export default function Projects(): JSX.Element {
                 type="project"
             />
             <ResumeSection id="projects" title={`Work Projects`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
-
         </>
     );
 }

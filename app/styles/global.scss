@@ -1,5 +1,6 @@
 :root {
     --bg-color: #e5e3e6;
+    --bg-invert-color: #1c1e1c;
     --bold-color: #000;
     --divider-font: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
     --header-bottom: #ceced0;
@@ -19,6 +20,7 @@
 
 :root[data-theme='dark'] {
     --bg-color: #1c1e1c;
+    --bg-invert-color: #e5e3e6;
     --bold-color: #fff;
     --divider-font: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
     --footer-border-top: #31312f;

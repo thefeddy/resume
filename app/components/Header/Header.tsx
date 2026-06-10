@@ -19,10 +19,9 @@ export default function ResumeHeader(): JSX.Element {
     return (
         <>
             <nav>
-
                 <ul>
-                    <li onClick={changeMode} title="Dark Mode">
-                        {(darkmode) ? (<FontAwesomeIcon icon="fa-duotone fa-solid fa-moon-stars" />) : (<FontAwesomeIcon icon="fa-duotone fa-solid fa-sun-bright" />)}
+                    <li onClick={changeMode} title={darkmode ? 'Light Mode' : 'Dark Mode'}>
+                        {(darkmode) ? (<FontAwesomeIcon icon="fa-duotone fa-solid fa-sun-bright" />) : (<FontAwesomeIcon icon="fa-duotone fa-solid fa-moon-stars" />)}
                     </li>
                     <li>
                         <a href="https://www.instagram.com/fe.dd.y/" title="Instagram" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon="fa-brands fa-instagram" /></a>
