@@ -30,7 +30,7 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
         const handleKeyDown = (event: KeyboardEvent) => {
 
             if (event.key === 'Escape' || event.key === 'Esc') {
-                onClose();
+                handleClose();
             }
         };
         window.addEventListener('keydown', handleKeyDown);
@@ -55,9 +55,10 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
     const prevSlide = () => {
         setCurrentIndex((prev) => (prev === 0 ? totalImages - 1 : prev - 1));
     };
+
     const handleClose = () => {
-        setIsExpanded(false);   // Collapse the image wrapper
-        setCurrentIndex(0);     // Reset the slider back to the first image
+        setIsExpanded(false);
+        setCurrentIndex(0);
         onClose();
     };
 
@@ -67,6 +68,9 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
                 <div className="header">
                     <h1>{content?.title}</h1>
                     <button className="close sunken" onClick={handleClose}>x</button>
+                </div>
+                <div className="sub">
+                    {content.company}
                 </div>
                 <div className={clsx('modal-content', { expanded: isExpanded })}>
                     {type == 'project' ? (
@@ -97,7 +101,7 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
                             </div>
                             {totalImages > 0 && (
                                 <div className={clsx('images-wrapper', { expanded: isExpanded })}>
-                                    <button className="prev" onClick={prevSlide}>
+                                    <button className="prev sunken" onClick={prevSlide}>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
@@ -114,7 +118,7 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
                                     </button>
 
                                     <img src={`assets/img/${currentImage}`} alt="Gallery" />
-                                    <button className="next" onClick={nextSlide}>
+                                    <button className="next sunken" onClick={nextSlide}>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"

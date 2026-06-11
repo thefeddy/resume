@@ -36,7 +36,7 @@
         "photo": "logo-adventhealth.svg",
         "type": "react",
         "youtube": "XJOeKY8C7cY",
-        "body": "<p>Developed a high-pressure, one-week turnaround video sequencing engine for a multi-screen \"Airplane Window\" environment. Built a <strong>manifest-driven playback system</strong> with <strong>frame-accurate seeking</strong> to ensure each independent display was primed to sync with a live guided tour's narrative.</p>",
+        "body": "<p>Developed a <strong>React</strong> video sequencing engine on a tight one-week turnaround for a multi-screen \"Airplane Window\" environment. Built a <strong>manifest-driven playback system</strong> that handles <strong>frame-accurate seeking</strong> and dynamic state toggles to synchronize independent displays with a live tour's narrative.</p>",
         "tech": [
             "react",
             "typescript"
@@ -97,7 +97,14 @@
         "title": "Inclusion Experiences",
         "company": "USTA",
         "photo": "logo-usta.png",
-        "type": "js"
+        "type": "vue",
+        "body": "<p>Engineered a dual-user video capture kiosk app in <strong>Vue 3 and Vite</strong> for on-site live events. Developed a fixed-viewport flow that handles dual-input <strong>virtual keyboard validation</strong>, dynamic <strong>Lottie animations</strong>, and hardware-accelerated <strong>1080p camera recording</strong>. Built local streaming logic to capture multi-stage interview sessions, auto-generating and downloading timestamped, composite <strong>WebM media files</strong> directly to the local LAN storage layer.</p>",
+        "tech": [
+            "vue",
+            "vite",
+            "lottie",
+            "web RTC media"
+        ]
     },
     {
         "title": "SATCOM App",
@@ -117,7 +124,15 @@
         "title": "Game Show Controls",
         "company": "Face Amusement",
         "photo": "logo-face-amusement.png",
-        "type": "vue"
+        "type": "vue",
+        "body": "<p>Developed a real-time operator show control dashboard in <strong>Vue 3 and Vuetify</strong> to orchestrate location-based multiplayer arcade games. Engineered a secure, token-authenticated wizard flow utilizing <strong>Pinia state machines</strong> and a centralized <strong>MQTT real-time messaging pipeline</strong> to manage active sessions. Integrated asynchronous <strong>RFID hardware tracking</strong> via specialized hardware inputs, dynamic drag-and-drop team assignment modules, and localized countdown timers across a highly optimized <strong>Vite custom web components architecture</strong>.</p>",
+        "tech": [
+            "vue",
+            "vuetify",
+            "pinia",
+            "MQTT",
+            "RFID Hardware"
+        ]
     },
     {
         "title": "Speakeasy Photobooth AI",
@@ -135,7 +150,15 @@
         "title": "Interactives",
         "company": "Play-Doh",
         "photo": "logo-play-doh.png",
-        "type": "react"
+        "type": "react",
+        "body": "<p>Architected a state-driven, multi-lingual kiosk experience deployed across seven physical locations. Integrated <strong>react-i18next</strong> and <strong>howler.js</strong> for localized UI layouts and hardware-optimized audio routing. Beyond the code, managed the end-to-end physical staging, configuring localized <strong>RFID reader core services</strong> and executing <strong>custom 3D printing</strong> for physical hardware component enclosures.</p>",
+        "tech": [
+            "react",
+            "i18next",
+            "howler",
+            "RFID Hardware",
+            "3D Printing"
+        ]
     },
     {
         "title": "Internal Tools",
@@ -156,9 +179,16 @@
         "type": "wordpress"
     },
     {
-        "title": "Electron Tour App",
+        "title": "Enterprise Sales Kiosk",
         "company": "Air Methods",
         "photo": "logo-air-methods.png",
-        "type": "js"
+        "type": "angular",
+        "body": "<p>Engineered an enterprise-tier desktop presentation and kiosk application using <strong>Angular 12 and Electron 13</strong> to deploy cross-platform Mac and Windows executables. Developed an interactive, multi-module sales pipeline featuring a dynamic <strong>acuity index questionnaire engine</strong>, a live mission-management logistics simulator, and highly interactive touch-optimized slide layouts using <strong>Swiper architecture</strong>. Securely integrated embedded <strong>Power BI analytics dashboards</strong> to showcase real-time data compliance alongside complex clinical research data structures and gold-standard predictive medical matrices.</p>",
+        "tech": [
+            "angular",
+            "electron",
+            "power-bi",
+            "swiper"
+        ]
     }
 ]
