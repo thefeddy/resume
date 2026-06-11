@@ -2,7 +2,7 @@
     {
         "title": "Lively Designer",
         "company": "Boeing",
-        "photo": "logo-boeing.svg",
+        "photo": "logo-boeing.png",
         "type": "node",
         "body": "<p>Developed a web-based kiosk orchestrating an end-to-end hardware loop. Managed <strong>MQTT-based environmental control</strong> for a 100\" display, integrated iPad camera capture, and implemented <strong>IPP network printing</strong> with integrated queue management and hardware error-state handling.</p>",
         "tech": [
