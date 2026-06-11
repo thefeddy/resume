@@ -17,13 +17,14 @@ $tech-palette: (
     "raspberrypi": (#c51a4a, var(--text-light), false),
     "react": (#61dafb, var(--text-dark), false),
     "rive": (#111111, var(--text-light), true),
-    // Enables custom border
     "stablediffusion": (#8a2be2, var(--text-light), false),
     "twig": (#a1c012, var(--text-dark), false),
     "typescript": (#3178c6, var(--text-light), false),
     "vue": (#4fc08d, var(--text-light), false),
     "websockets": (#00cc66, var(--text-dark), false),
-    "wordpress": (#21759b, var(--text-light), false)
+    "8thwall": (#111111, var(--text-light), true),
+    "wordpress": (#21759b, var(--text-light), false),
+    "aframe": (#ef2d5e, var(--text-light), false)
 );
 
 :root {

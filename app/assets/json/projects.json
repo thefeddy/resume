@@ -50,7 +50,7 @@
         "body": "<p> Lead Interactive Engineer for a multi-year suite of in-app experiences. Architected a <strong>real-time AR zone-capture game</strong> utilizing <strong>GPS and MQTT</strong> for sub-second synchronization across thousands of concurrent users. Engineered narrative progression systems and <strong>QR-driven video modules</strong> with persistent state, while managing the <strong>Angular integration</strong> of custom high-performance components. Delivered a scalable, event-driven architecture using <strong>Node.js and Django</strong> capable of handling peak seasonal traffic.</p>",
         "tech": [
             "angular",
-            "nodejs",
+            "node",
             "typescript",
             "8th wall"
         ]
@@ -74,7 +74,6 @@
         "body": "<p>Orchestrated the full-scale frontend rewrite of Universal’s internal NDA system from legacy Swift to <strong>Vue 3 (Options API)</strong> and strict <strong>TypeScript</strong>, subsequently expanding ownership to full-tech development. Currently manage the entire ecosystem, including UI/UX design and the <strong>Python (Django)</strong> / <strong>PostgreSQL</strong> backend. This end-to-end modernization streamlined the document-signing workflow for thousands of global enterprise users while maintaining 100% compliance with security standards.</p>",
         "tech": [
             "vue3",
-            "MQTT",
             "typescript",
             "django",
             "python",
@@ -88,7 +87,7 @@
         "type": "wordpress",
         "body": "<p>Architected the custom digital hub for the <strong>Halo: Outpost Discovery</strong> touring fan experience. Built with a professional <strong>WordPress, Twig, and ACF</strong> tech, the platform managed dynamic body and engagement for thousands of attendees across the 2019 multi-city circuit. Archived previews available via <a href=\"https://www.halopedia.org/Halo:_Outpost_Discovery\" target=\"_blank\" rel=\"noopener noreferrer\">Halopedia</a> and <a href=\"https://web.archive.org/web/20190801234133/https://halooutpostdiscovery.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Wayback Machine</a>.</p>",
         "tech": [
-            "php",
+            "PHP",
             "twig",
             "wordpress",
             "ACF"
