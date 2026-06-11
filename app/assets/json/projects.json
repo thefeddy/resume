@@ -7,8 +7,8 @@
         "body": "<p>Developed a web-based kiosk orchestrating an end-to-end hardware loop. Managed <strong>MQTT-based environmental control</strong> for a 100\" display, integrated iPad camera capture, and implemented <strong>IPP network printing</strong> with integrated queue management and hardware error-state handling.</p>",
         "tech": [
             "vue3",
-            "mqtt",
-            "ipp",
+            "MQTT",
+            "IPP",
             "typescript"
         ]
     },
@@ -63,7 +63,7 @@
         "body": "<p>Engineered a high-reliability Show Control suite for <strong>The Tour at NBC Studios</strong>. I architected a resilient, iPad-based interface utilizing <strong>MQTT and WebSockets</strong> to deliver sub-millisecond latency for live audio triggers and script timing during production. By migrating legacy workflows to a <strong>TypeScript-based architecture</strong>, I eliminated synchronization errors between production staff and technical assets, delivering a unified, reactive dashboard optimized for high-pressure, live-tour environments.</p>",
         "tech": [
             "vue3",
-            "mqtt"
+            "MQTT"
         ]
     },
     {
@@ -74,7 +74,7 @@
         "body": "<p>Orchestrated the full-scale frontend rewrite of Universal’s internal NDA system from legacy Swift to <strong>Vue 3 (Options API)</strong> and strict <strong>TypeScript</strong>, subsequently expanding ownership to full-tech development. Currently manage the entire ecosystem, including UI/UX design and the <strong>Python (Django)</strong> / <strong>PostgreSQL</strong> backend. This end-to-end modernization streamlined the document-signing workflow for thousands of global enterprise users while maintaining 100% compliance with security standards.</p>",
         "tech": [
             "vue3",
-            "mqtt",
+            "MQTT",
             "typescript",
             "django",
             "python",
@@ -91,7 +91,7 @@
             "php",
             "twig",
             "wordpress",
-            "acf"
+            "ACF"
         ]
     },
     {
@@ -105,7 +105,14 @@
         "company": "Cobham / AAQ / IPAccess",
         "photo": "logo-ipaccess.png",
         "type": "js",
-        "body": "<p>Senior Systems Engineer and UI Lead overseeing the <strong>full three-generation evolution</strong> of satellite antenna control interfaces. I orchestrated a multi-year modernization strategy, transitioning legacy jQuery panels into a high-performance, component-based architecture. To support mission-critical remote deployments, I engineered <strong>Node.js gateways</strong> for Raspberry Pi hardware, ensuring low-latency hardware-to-UI synchronization and system uptime across every iteration of the platform.</p>"
+        "body": "<p>Senior Systems Engineer and UI Lead overseeing the <strong>full three-generation evolution</strong> of satellite antenna control interfaces. I orchestrated a multi-year modernization strategy, transitioning legacy jQuery panels into a high-performance, component-based architecture. To support mission-critical remote deployments, I engineered <strong>Node.js gateways</strong> for Raspberry Pi hardware, ensuring low-latency hardware-to-UI synchronization and system uptime across every iteration of the platform.</p>",
+        "tech": [
+            "jQuery",
+            "angular",
+            "typescript",
+            "node",
+            "Raspberry Pi"
+        ]
     },
     {
         "title": "Game Show Controls",

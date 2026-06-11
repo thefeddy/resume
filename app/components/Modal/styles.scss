@@ -130,9 +130,11 @@
                     transition: filter 550ms ease-in-out;
                     text-transform: capitalize;
 
-                    color: var(--projects-text-color);
+                    //color: var(--projects-text-color);
+
                     border: 1px solid black;
-                    background: var(--primary-color);
+
+                    //background: var(--primary-color);
 
                     place-items: center;
                 }

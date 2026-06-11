@@ -1,0 +1,57 @@
+$tech-palette: (
+    "acf": (#4a5aec, var(--text-light), false),
+    "angular": (#dd0031, var(--text-light), false),
+    "comfyui": (#ff7b00, var(--text-dark), false),
+    "django": (#092e20, var(--text-light), false),
+    "ipp": (#4a90e2, var(--text-light), false),
+    "javascript": (#f7df1e, var(--text-dark), false),
+    "jquery": (#0769ad, var(--text-light), false),
+    "mongodb": (#47a248, var(--text-light), false),
+    "mqtt": (#660066, var(--text-light), false),
+    "mysql": (#4479a1, var(--text-light), false),
+    "nest": (#e0234e, var(--text-light), false),
+    "node": (#339933, var(--text-light), false),
+    "php": (#777bb4, var(--text-light), false),
+    "postgresql": (#4169e1, var(--text-light), false),
+    "python": (#3776ab, var(--text-light), false),
+    "raspberrypi": (#c51a4a, var(--text-light), false),
+    "react": (#61dafb, var(--text-dark), false),
+    "rive": (#111111, var(--text-light), true),
+    // Enables custom border
+    "stablediffusion": (#8a2be2, var(--text-light), false),
+    "twig": (#a1c012, var(--text-dark), false),
+    "typescript": (#3178c6, var(--text-light), false),
+    "vue": (#4fc08d, var(--text-light), false),
+    "websockets": (#00cc66, var(--text-dark), false),
+    "wordpress": (#21759b, var(--text-light), false)
+);
+
+:root {
+    --text-light: #fff;
+    --text-dark: #1a1a1a;
+
+    @each $name, $config in $tech-palette {
+        --bg-#{$name}: #{nth($config, 1)};
+    }
+}
+
+@each $name, $config in $tech-palette {
+    $text-color: nth($config, 2);
+    $has-border: nth($config, 3);
+
+    .bg-#{$name} {
+        color: $text-color;
+        background-color: var(--bg-#{$name});
+
+        @if $has-border {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    @if $name =="vue" {
+        .bg-vue3 {
+            color: $text-color;
+            background-color: var(--bg-#{$name});
+        }
+    }
+}

@@ -54,13 +54,13 @@ export default function Extra(): JSX.Element {
             <p>While Javascript/Typescript may be my prefered coding language, I am always learning new ones. I am currently teaching myself Go + Beego.</p>
             <div className="photos">
                 <div className="photo" onClick={() => modal('P1S Printer', '/assets/img/personal/3d-printer.jpg')} >
-                    <img src="/assets/img/personal/3d-printer.jpg" alt="Bambu P1S 3D Printer" />
+                    <img src="/assets/img/personal/3d-printer.jpg" alt="Bambu P1S 3D Printer" loading="lazy" />
                 </div>
                 <div className="photo" onClick={() => modal('My Computah', '/assets/img/personal/computer.jpg')} >
-                    <img src="/assets/img/personal/computer.jpg" alt="My machine" />
+                    <img src="/assets/img/personal/computer.jpg" alt="My machine" loading="lazy" />
                 </div>
                 <div className="photo" onClick={() => modal('Just some books', '/assets/img/personal/books.jpg')} >
-                    <img src="/assets/img/personal/books.jpg" alt="Some of my books" />
+                    <img src="/assets/img/personal/books.jpg" alt="Some of my books" loading="lazy" />
                 </div>
             </div>
         </>

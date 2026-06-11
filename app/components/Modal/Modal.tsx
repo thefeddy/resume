@@ -2,7 +2,7 @@
 import './styles.scss';
 
 /* React */
-import { type ReactNode, type JSX, useState } from 'react';
+import { type ReactNode, type JSX, useState, useEffect } from 'react';
 
 /* Libs */
 import clsx from 'clsx';
@@ -24,6 +24,22 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
     const navText = isExpanded ? 'Close Images' : 'View Images';
     const totalImages = content?.images?.length || 0;
     const currentImage = type === 'project' ? content?.images?.[currentIndex] : undefined;
+
+    useEffect(() => {
+        if (!isOpen) return;
+        const handleKeyDown = (event: KeyboardEvent) => {
+
+            if (event.key === 'Escape' || event.key === 'Esc') {
+                onClose();
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [isOpen, onClose]);
+
+    if (!isOpen) return null;
 
     const viewImages = () => {
         setIsExpanded(prev => {
@@ -72,7 +88,7 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
                                 {content?.tech && (
                                     <div className="list">
                                         {content.tech.map((item, index) => (
-                                            <div className="tech" key={index}>
+                                            <div className={`tech bg-${item.toLowerCase().replace(/[^a-z0-9]/g, '')}`} key={index}>
                                                 {item}
                                             </div>
                                         ))}

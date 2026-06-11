@@ -106,7 +106,7 @@ export default function Projects(): JSX.Element {
                         data-type={project?.type}
                         onClick={() => modal(index)}>
                         <div className="photo">
-                            {project.photo && (<img src={`/assets/img/${project.photo}`} />)}
+                            {project.photo && (<img src={`/assets/img/${project.photo}`} loading="lazy" />)}
                         </div>
                         <div className="details">
                             <p>{project.title}</p>
