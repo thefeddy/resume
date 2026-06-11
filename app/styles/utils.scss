@@ -1,3 +1,5 @@
+@use "sass:list";
+
 $tech-palette: (
     "acf": (#4a5aec, var(--text-light), false),
     "angular": (#dd0031, var(--text-light), false),
@@ -32,13 +34,13 @@ $tech-palette: (
     --text-dark: #1a1a1a;
 
     @each $name, $config in $tech-palette {
-        --bg-#{$name}: #{nth($config, 1)};
+        --bg-#{$name}: #{list.nth($config, 1)};
     }
 }
 
 @each $name, $config in $tech-palette {
-    $text-color: nth($config, 2);
-    $has-border: nth($config, 3);
+    $text-color: list.nth($config, 2);
+    $has-border: list.nth($config, 3);
 
     .bg-#{$name} {
         color: $text-color;
