@@ -15,19 +15,43 @@ section {
 
     &:nth-of-type(even) {
         .container {
-            /*
-                TODO: stop being lazy and do this properly, causes screen reading issues.
-            */
-            transform: scaleX(-1);
-
-            p,
-            h1,
-            span,
-            h2 {
-                transform: scaleX(-1);
-            }
-
             @media (min-width: 991px) {
+                .title {
+                    flex-direction: row-reverse;
+
+                    width: 33%;
+                    margin-left: auto;
+
+                    svg {
+                        margin-right: auto;
+                        margin-left: unset;
+                    }
+                }
+
+                .content {
+                    aside {
+                        padding-right: 0;
+                        padding-left: 50px;
+
+                        order: 1;
+                    }
+
+                    .right {
+                        padding-right: 50px;
+                        padding-left: 0;
+
+                        border-right: 2px solid var(--primary-color);
+                        border-left: none;
+
+                        order: 0;
+
+                        &::after {
+                            right: -5px;
+                            left: auto;
+                        }
+                    }
+                }
+
                 aside {
                     padding-right: 50px;
                 }
