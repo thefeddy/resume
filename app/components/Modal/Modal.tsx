@@ -50,7 +50,7 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
             <div className="body" onClick={(e) => e.stopPropagation()}>
                 <div className="header">
                     <h1>{content?.title}</h1>
-                    <button className="close" onClick={handleClose}>x</button>
+                    <button className="close sunken" onClick={handleClose}>x</button>
                 </div>
                 <div className={clsx('modal-content', { expanded: isExpanded })}>
                     {type == 'project' ? (
@@ -124,7 +124,7 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
             {content?.images && content.images.length > 0 && (
                 <div className={clsx('modal-nav', { expanded: isExpanded })} onClick={(e) => e.stopPropagation()}>
                     <p>Showing image <strong>{currentIndex + 1}</strong> of <strong>{totalImages}</strong></p>
-                    <button onClick={viewImages}>{navText}</button>
+                    <button onClick={viewImages} className="sunken">{navText}</button>
                 </div>
             )}
         </div>

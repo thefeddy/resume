@@ -123,36 +123,9 @@ $types: all, js, vue, angular, react, wordpress, node;
 
         place-content: center;
 
-        &:hover {
-            &::after {
-                font-size: 12px;
-                font-weight: bold;
-
-                position: absolute;
-                z-index: 20;
-                bottom: 120%;
-                left: 50%;
-
-                padding: 6px 10px;
-
-                content: attr(data-tooltip);
-                transform: translateX(-50%);
-                white-space: nowrap;
-                letter-spacing: 0.05rem;
-                text-transform: capitalize;
-
-                color: var(--projects-text-color);
-                background: var(--bg-invert-color);
-            }
-        }
-
         &:hover,
         &.active {
-            border-top: 1px solid rgba(0, 0, 0, 0.4);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.4);
             background: var(--primary-color);
-            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4),
-                inset -1px -1px 2px rgba(255, 255, 255, 0.2);
         }
     }
 }

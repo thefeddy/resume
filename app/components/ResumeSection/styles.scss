@@ -1,4 +1,65 @@
 section {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 50px 0 0 0;
+
+    border-bottom: 1px solid var(--section-bottom);
+
+    align-items: center;
+    justify-content: center;
+
+    &:nth-of-type(even) {
+        .container {
+            /*
+                TODO: stop being lazy and do this properly, causes screen reading issues.
+            */
+            transform: scaleX(-1);
+
+            p,
+            h1,
+            span,
+            h2 {
+                transform: scaleX(-1);
+            }
+
+            @media (min-width: 991px) {
+                aside {
+                    padding-right: 50px;
+                }
+            }
+        }
+    }
+
+    h1 {
+        font-size: 30px;
+        font-weight: 500;
+
+        position: relative;
+
+        margin: 0 0 50px 0;
+
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+
+        &::after {
+            position: absolute;
+            bottom: -5px;
+            left: 25px;
+
+            width: 50px;
+            height: 2px;
+
+            content: '';
+
+            background: var(--primary-color);
+        }
+    }
+
     .title {
         display: flex;
 

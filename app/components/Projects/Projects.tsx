@@ -80,7 +80,7 @@ export default function Projects(): JSX.Element {
                 {MENU_CONFIG.map((item) => {
                     const isActive = projectType === item.name;
                     return (
-                        <div className={clsx('type', { active: isActive })}
+                        <div className={clsx('type tooltip --vertical sunken', { active: isActive })}
                             onClick={() => menu(item.name)}
                             key={item.name}
                             data-tooltip={item.name}
