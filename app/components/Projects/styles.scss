@@ -34,6 +34,7 @@ $types: all, js, vue, angular, react, wordpress, node;
 
         cursor: not-allowed;
         user-select: none;
+        pointer-events: auto;
 
         opacity: 0.5;
         color: var(--projects-text-color);

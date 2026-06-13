@@ -88,6 +88,27 @@
         border: 1px solid black;
         background: var(--bg-color);
 
+        &::before {
+            position: absolute;
+            left: -55px;
+
+            width: 40px;
+            height: 100%;
+
+            content: '';
+
+            opacity: 0.1;
+            background: repeating-linear-gradient(45deg,
+                    var(--hazard-yellow),
+                    var(--hazard-yellow) var(--stripe-width),
+                    var(--hazard-black) var(--stripe-width),
+                    var(--hazard-black) calc(var(--stripe-width) * 2));
+
+            --hazard-black: var(--primary-color);
+            --hazard-yellow: transparent;
+            --stripe-width: 10px;
+        }
+
         .modal-content {
             height: auto;
             padding: 20px;

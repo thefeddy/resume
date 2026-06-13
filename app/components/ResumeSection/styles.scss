@@ -8,6 +8,8 @@ section {
     margin-bottom: 50px;
     padding: 50px 0 0 0;
 
+    pointer-events: none;
+
     border-bottom: 1px solid var(--section-bottom);
 
     align-items: center;
