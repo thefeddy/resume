@@ -31,7 +31,6 @@ export const GlobalProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     useEffect(() => {
         const root = window.document.documentElement;
         const theme = darkmode ? 'dark' : 'light';
-        console.log(darkmode);
 
         root.setAttribute('data-theme', theme);
         localStorage.setItem('darkmode', JSON.stringify(darkmode));
