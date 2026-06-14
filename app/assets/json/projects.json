@@ -61,6 +61,14 @@
         "photo": "logo-nbcu.png",
         "type": "vue",
         "body": "<p>Engineered a high-reliability Show Control suite for <strong>The Tour at NBC Studios</strong>. I architected a resilient, iPad-based interface utilizing <strong>MQTT and WebSockets</strong> to deliver sub-millisecond latency for live audio triggers and script timing during production. By migrating legacy workflows to a <strong>TypeScript-based architecture</strong>, I eliminated synchronization errors between production staff and technical assets, delivering a unified, reactive dashboard optimized for high-pressure, live-tour environments.</p>",
+        "images": [
+            "projects/nbc-show-tour/login.jpg",
+            "projects/nbc-show-tour/select-tour.jpg",
+            "projects/nbc-show-tour/guests.jpg",
+            "projects/nbc-show-tour/pre-show.jpg",
+            "projects/nbc-show-tour/pre-taping.jpg",
+            "projects/nbc-show-tour/sfx-please-wait.jpg"
+        ],
         "tech": [
             "vue3",
             "MQTT"
@@ -140,8 +148,16 @@
         "photo": "logo-celebx.png",
         "type": "js",
         "body": "<p>Led the technical R&D and implementation of a generative AI-powered photobooth for Royal Caribbean. I successfully proposed a custom <strong>Stable Diffusion (A1111)</strong> filtering system, which expanded the project scope to include 1920s, 1950s, and 1980s styles. I architected a transition to <strong>ComfyUI</strong> to build a more robust, node-based workflow and oversaw the technical handoff to contractors, ensuring the final output maintained the original vision for high-fidelity, era-specific filtering.</p>",
+        "images": [
+            "projects/royal-photo-booth/ComfyUI_00023_.jpg",
+            "projects/royal-photo-booth/ComfyUI_00029_.jpg",
+            "projects/royal-photo-booth/ComfyUI_00052_.jpg",
+            "projects/royal-photo-booth/ComfyUI_00073_.jpg",
+            "projects/royal-photo-booth/ComfyUI_00077_.jpg",
+            "projects/royal-photo-booth/ComfyUI_00774_.jpg"
+        ],
         "tech": [
-            "comfyui",
+            "ComfyUI",
             "stable diffusion",
             "websockets"
         ]
