@@ -67,13 +67,13 @@ export default function ResumeHeader(): JSX.Element {
                         <h2>{role}</h2>
                     </div>
                     <ul className="information">
-                        <li className="looking"><FontAwesomeIcon icon="fa-light fa-chart-user" size="lg" /><span>Looking For Work</span></li>
+                        <li className="looking"><FontAwesomeIcon icon="fa-light fa-chart-user" size="lg" /><span>Open to Work</span></li>
                         <li>
                             <FontAwesomeIcon icon="fa-light fa-envelope" size="lg" />
                             <span><a
                                 href="mailto:thefeddy@gmail.com">thefeddy@gmail.com</a></span>
                         </li>
-                        <li>
+                        <li className="tooltip --vertical" data-tooltip="preferred Locations : Philly, NYC, LA, Seattle, San Diego.">
                             <FontAwesomeIcon icon="fa-light fa-location-crosshairs" size="lg" /><span>Orlando, FL <strong>(Willing to relocate)</strong></span>
                         </li>
                     </ul>

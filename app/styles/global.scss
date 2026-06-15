@@ -145,6 +145,7 @@ button,
 
 .tooltip {
     position: relative;
+    cursor: pointer;
 
     &.--horizontal {
         &:hover {
@@ -183,6 +184,12 @@ button,
 
             color: var(--projects-text-color);
             background: var(--bg-invert-color);
+        }
+    }
+
+    &:hover {
+        &::after {
+            opacity: 1;
         }
     }
 }

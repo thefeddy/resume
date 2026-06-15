@@ -155,6 +155,7 @@ header {
             list-style-type: none;
 
             &.looking {
+                transition: text-underline-offset 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out;
                 text-decoration: underline;
 
                 color: var(--primary-color);
@@ -163,6 +164,11 @@ header {
 
                 span {
                     font-weight: 900;
+                }
+
+                &:hover {
+                    text-decoration-color: var(--invert-primary-color);
+                    text-underline-offset: 12px;
                 }
             }
 
