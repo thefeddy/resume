@@ -17,7 +17,7 @@ export default function Skills(): JSX.Element {
         dark: 'lightsaber.mp3'
     }
 
-    const content = () => (
+    const content = (
         <>
             <div className="skills">
 
@@ -55,7 +55,7 @@ export default function Skills(): JSX.Element {
         </>
     );
 
-    const aside = () => (
+    const aside = (
         <>
             <p>Just a few of the skills, and tools that I use.</p>
         </>
@@ -63,7 +63,7 @@ export default function Skills(): JSX.Element {
 
     return (
         <>
-            <ResumeSection id="skills" title={`Skills`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
+            <ResumeSection id="skills" title={`Skills`} icon={`fa-light ${icon}`} content={content} aside={aside} sounds={sounds} />
         </>
     );
 }

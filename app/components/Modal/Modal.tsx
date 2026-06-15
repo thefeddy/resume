@@ -2,7 +2,7 @@
 import './styles.scss';
 
 /* React */
-import { type ReactNode, type JSX, useState, useEffect } from 'react';
+import { type JSX, useState, useEffect } from 'react';
 
 /* Libs */
 import clsx from 'clsx';
@@ -49,11 +49,11 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
     }
 
     const nextSlide = () => {
-        setCurrentIndex((prev) => (prev === totalImages - 1 ? 0 : prev + 1));
+        setCurrentIndex((prev: number) => (prev === totalImages - 1 ? 0 : prev + 1));
     };
 
     const prevSlide = () => {
-        setCurrentIndex((prev) => (prev === 0 ? totalImages - 1 : prev - 1));
+        setCurrentIndex((prev: number) => (prev === 0 ? totalImages - 1 : prev - 1));
     };
 
     const handleClose = () => {
