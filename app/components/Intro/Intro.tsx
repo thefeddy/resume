@@ -53,7 +53,7 @@ export default function Intro(): JSX.Element {
         setName(event.currentTarget.value)
     }
 
-    const content = (
+    const content = () => (
         <>
             <div>
                 <p>
@@ -75,7 +75,7 @@ export default function Intro(): JSX.Element {
         </>
     );
 
-    const aside = (
+    const aside = () => (
         <>
             <p>package.json</p>
             <div className="packagedotjson">
@@ -90,7 +90,7 @@ export default function Intro(): JSX.Element {
 
     return (
         <>
-            <ResumeSection id="about" title={`Hello! : }`} icon="fa-light fa-messages" content={content} aside={aside} sounds={sounds} />
+            <ResumeSection id="about" title={`Hello! : }`} icon="fa-light fa-messages" content={content()} aside={aside()} sounds={sounds} />
         </>
     );
 }

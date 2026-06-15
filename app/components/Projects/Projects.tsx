@@ -74,7 +74,7 @@ export default function Projects(): JSX.Element {
         }
     }
 
-    const content = (
+    const content = () => (
         <>
             <div className="menu">
                 {MENU_CONFIG.map((item) => {
@@ -118,7 +118,7 @@ export default function Projects(): JSX.Element {
         </>
     );
 
-    const aside = (
+    const aside = () => (
         <>
             <p>Feel free to look at some of the projects I have worked on over the years.</p>
             <em>More Projects Details will be added later on.</em>
@@ -137,7 +137,7 @@ export default function Projects(): JSX.Element {
                 content={modalContent}
                 type="project"
             />
-            <ResumeSection id="projects" title={`Work Projects`} icon={`fa-light ${icon}`} content={content} aside={aside} sounds={sounds} />
+            <ResumeSection id="projects" title={`Work Projects`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
         </>
     );
 }

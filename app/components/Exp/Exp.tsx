@@ -20,7 +20,7 @@ export default function Exp(): JSX.Element {
         dark: 'vader-lack.mp3'
     }
 
-    const content = (
+    const content = () => (
         <>
             <div className="jerb">
 
@@ -36,7 +36,7 @@ export default function Exp(): JSX.Element {
         </>
     );
 
-    const aside = (
+    const aside = () => (
         <>
             <p>My Job(s)</p>
         </>
@@ -44,7 +44,7 @@ export default function Exp(): JSX.Element {
 
     return (
         <>
-            <ResumeSection id="exp" title={`Experience`} icon={`fa-light ${icon}`} content={content} aside={aside} sounds={sounds} />
+            <ResumeSection id="exp" title={`Experience`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
         </>
     );
 }

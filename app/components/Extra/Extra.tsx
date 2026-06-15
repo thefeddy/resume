@@ -44,7 +44,7 @@ export default function Extra(): JSX.Element {
         light: 'lightsaber.mp3',
         dark: 'lightsaber.mp3'
     }
-    const content = (
+    const content = () => (
         <>
             <p>When I am not coding, I am usually face first into a book, which I am currently reading
                 <b>
@@ -66,7 +66,7 @@ export default function Extra(): JSX.Element {
         </>
     );
 
-    const aside = (
+    const aside = () => (
         <>
             <p>You kept going?!? Fine, here's a little more about myself</p>
         </>
@@ -80,7 +80,7 @@ export default function Extra(): JSX.Element {
                 content={modalContent}
                 type="image"
             />
-            <ResumeSection id="extra" title={`Extra, Extra!`} icon={`fa-light ${icon}`} content={content} aside={aside} sounds={sounds} />
+            <ResumeSection id="extra" title={`Extra, Extra!`} icon={`fa-light ${icon}`} content={content()} aside={aside()} sounds={sounds} />
         </>
     );
 }
