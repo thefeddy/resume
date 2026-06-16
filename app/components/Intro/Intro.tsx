@@ -6,6 +6,7 @@ import ResumeSection from '~/components/ResumeSection/ResumeSection';
 
 /* Libs */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { type IconProp } from '@fortawesome/fontawesome-svg-core';
 
 /* React */
 import type { ChangeEvent, JSX } from 'react'
@@ -65,7 +66,7 @@ export default function Intro(): JSX.Element {
                                 <option key={name}>{name}</option>
                             ))}
                         </select>
-                        <FontAwesomeIcon icon="fa-light fa-caret-down" />
+                        <FontAwesomeIcon icon={"fa-light fa-caret-down" as IconProp} />
                     </span>,
                     <br />
                     I&rsquo;ve spent the last 14 years at X Studios evolving from a Full Sail grad into a <b>Senior UI Engineer</b> and Lead Architect.

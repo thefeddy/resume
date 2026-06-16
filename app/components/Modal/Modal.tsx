@@ -11,7 +11,7 @@ import parse from 'html-react-parser';
 
 /* Interace */
 interface ModalProps {
-    content: Content;
+    content: Content | undefined;
     isOpen: boolean;
     type: string;
     onClose: () => void;
@@ -70,7 +70,7 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
                     <button className="close sunken" onClick={handleClose}>x</button>
                 </div>
                 <div className="sub">
-                    {content.company}
+                    {content?.company}
                 </div>
                 <div className={clsx('modal-content', { expanded: isExpanded })}>
                     {type == 'project' ? (

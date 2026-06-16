@@ -48,7 +48,7 @@ export default function Extra(): JSX.Element {
         <>
             <p>When I am not coding, I am usually face first into a book, which I am currently reading
                 <b>
-                    <a href="https://www.amazon.com/dp/B08BX5D4LC?binding=hardcover&ref=dbs_m_mng_rwt_sft_thcv_tkin" rel="noopener noreferrer" target="_blank"> Dungeon Crawler Carl</a>
+                    <a href="https://www.amazon.com/dp/B08BX5D4LC?binding=hardcover&ref=dbs_m_mng_rwt_sft_thcv_tkin" rel="noopener noreferrer" target="_blank" title="Amazon:Dungeon Crawler Carl"> Dungeon Crawler Carl</a>
                 </b>, and if I am not doing that I'm either playing video games or 3D printing something.
             </p>
             <p>While Javascript/Typescript may be my prefered coding language, I am always learning new ones. I am currently teaching myself Go + Beego.</p>

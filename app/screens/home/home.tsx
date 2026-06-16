@@ -15,15 +15,15 @@ import Footer from '~/components/Footer/Footer';
 export function HomeScreen() {
     return (
         <>
+            <ResumeHeader />
             <main>
-                <ResumeHeader />
                 <Intro />
                 <Exp />
                 <Projects />
                 <Skills />
                 <Extra />
-                <Footer />
             </main>
+            <Footer />
         </>
     );
 }

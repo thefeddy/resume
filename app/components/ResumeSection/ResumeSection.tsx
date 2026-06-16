@@ -52,17 +52,17 @@ export default function ResumeSection({ id, title, icon, aside, content, sounds 
 
     return (
         <>
-            <section id={id}>
+            <section id={id} aria-labelledby={`${id}-heading`}>
                 <div className="container">
                     <div className="title">
                         <h1>{title}</h1>
                         <FontAwesomeIcon icon={icon} size="2xl" style={{ color: "#272727", }} onClick={() => play(sounds)} />
                     </div>
-                    <div className="content">
-                        <aside>
+                    <div className="content" role="presentation">
+                        <aside aria-label={`${title} metadata`}>
                             {aside}
                         </aside>
-                        <div className="right">
+                        <div className="right" aria-label={`${title} content details`}>
                             {content}
                         </div>
                     </div>

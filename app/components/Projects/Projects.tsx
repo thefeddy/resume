@@ -7,9 +7,9 @@ import projects from '~/assets/json/projects.json';
 import ResumeSection from '~/components/ResumeSection/ResumeSection';
 import Modal from '../Modal/Modal';
 
-
 /* Libs */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { type IconProp } from '@fortawesome/fontawesome-svg-core';
 import clsx from 'clsx';
 
 /* React */
@@ -46,7 +46,7 @@ const MENU_CONFIG = [
         name: 'node',
         icon: 'fa-brands fa-node-js'
     }
-]
+] as const;
 
 export default function Projects(): JSX.Element {
     const [projectType, setProjectType] = useState<string>('all');
@@ -68,7 +68,6 @@ export default function Projects(): JSX.Element {
 
     const modal = (index: number) => {
         if (projects[index]?.body) {
-
             setIsModalOpen(true);
             setModalContent(projects[index]);
         }
@@ -84,11 +83,12 @@ export default function Projects(): JSX.Element {
                             onClick={() => menu(item.name)}
                             key={item.name}
                             data-tooltip={item.name}
-                            aria-label={item.name}
+                            aria-label={`Projects for ${item.name}`}
                             aria-pressed={isActive}
+                            role="button"
                         >
                             {item.icon != '' ? (
-                                <FontAwesomeIcon icon={item.icon} />
+                                <FontAwesomeIcon icon={item.icon as IconProp} />
                             ) :
                                 (
                                     <>{item.name}</>
@@ -104,9 +104,13 @@ export default function Projects(): JSX.Element {
                         className={clsx('project', { 'has': project.body })}
                         key={index}
                         data-type={project?.type}
-                        onClick={() => modal(index)}>
+                        onClick={() => modal(index)}
+                        aria-label={`View details for ${project.title} by ${project.company}`}
+                        role="button"
+                        tabIndex={0}
+                    >
                         <div className="photo">
-                            {project.photo && (<img src={`/assets/img/${project.photo}`} loading="lazy" />)}
+                            {project.photo && (<img src={`/assets/img/${project.photo}`} loading="lazy" alt={`${project.company} logo`} />)}
                         </div>
                         <div className="details">
                             <p>{project.title}</p>
@@ -137,7 +141,7 @@ export default function Projects(): JSX.Element {
                 content={modalContent}
                 type="project"
             />
-            <ResumeSection id="projects" title={`Work Projects`} icon={`fa-light ${icon}`} content={content} aside={aside} sounds={sounds} />
+            <ResumeSection id="projects" title={`Work Projects`} icon={`fa-light ${icon}`} content={content} aside={aside} sounds={sounds} ariaLabel="Project Portfolio Grid" />
         </>
     );
 }

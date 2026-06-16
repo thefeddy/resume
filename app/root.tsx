@@ -10,7 +10,6 @@ import {
     Outlet,
     Scripts,
     ScrollRestoration,
-    useRouteError, useParams,
     NavLink
 } from "react-router-dom";
 
@@ -18,7 +17,6 @@ import type { Route } from "./+types/root";
 
 /* Global */
 import { GlobalProvider } from "./states/GlobalContext";
-import { useGlobal } from '~/states/useGlobal';
 
 /* Font Awesome */
 import { library } from '@fortawesome/fontawesome-svg-core';
