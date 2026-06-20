@@ -214,12 +214,12 @@
         "type": "react",
         "body": "<p>Architected and built an immersive movie and series discovery platform featuring a heavy, tactile 1970s hardware console UI. Developed as a dedicated initiative to deepen my mastery of full-stack engineering, this project serves as a comprehensive sandbox for refining strict type safety, isolating complex component states, and enforcing clean data contracts across <strong>React 18</strong>, <strong>TypeScript</strong>, and <strong>NestJS</strong>. Implemented a decoupled theme engine utilizing modern <strong>Sass Modules</strong> and structured BEM styling, allowing the layout's aesthetic to switch dynamically based on real-time search metadata. <br/> <a href=\"https://github.com/thefeddy/mpw-react\" target=\"_blank\" rel=\"noopener noreferrer\">Frontend Repo</a> & <a href=\"https://github.com/thefeddy/mpw\" target=\"_blank\" rel=\"noopener noreferrer\">Backend Repo</a>.</p>",
         "images": [
-            "projects/the-theatre/image1.png",
-            "projects/the-theatre/image2.png",
-            "projects/the-theatre/image3.png",
-            "projects/the-theatre/image4.png",
-            "projects/the-theatre/image5.png",
-            "projects/the-theatre/image6.png"
+            "projects/the-theatre/image1.webp",
+            "projects/the-theatre/image2.webp",
+            "projects/the-theatre/image3.webp",
+            "projects/the-theatre/image4.webp",
+            "projects/the-theatre/image5.webp",
+            "projects/the-theatre/image6.webp"
         ],
         "tech": [
             "React",
