@@ -36,9 +36,14 @@ $tech-palette: (
     "webrtcmedia": (#00b4d8, var(--text-light), false),
     "vuetify": (#1867c0, var(--text-light), false),
     "pinia": (#ffe082, var(--text-dark), false),
-    "electron": (#9FEAF9, var(--text-dark), false),
+    "electron": (#9feaf9, var(--text-dark), false),
     "powerbi": (#f2c811, var(--text-dark), false),
-    "swiper": (#0080ff, var(--text-light), false)
+    "swiper": (#0080ff, var(--text-light), false),
+
+    "sassmodules": (#cf649a, var(--text-light), false),
+    "bemarchitecture": (#000000, var(--text-light), true),
+    "postcss": (#dd3a0a, var(--text-light), false),
+    "cssinjs": (#d46e13, var(--text-light), false)
 );
 
 :root {
@@ -63,8 +68,16 @@ $tech-palette: (
         }
     }
 
+
     @if $name =="vue" {
         .bg-vue3 {
+            color: $text-color;
+            background-color: var(--bg-#{$name});
+        }
+    }
+
+    @if $name =="sassmodules" {
+        .bg-sass {
             color: $text-color;
             background-color: var(--bg-#{$name});
         }
