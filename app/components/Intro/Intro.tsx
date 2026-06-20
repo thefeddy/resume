@@ -61,7 +61,7 @@ export default function Intro(): JSX.Element {
                     <strong>Hi. Yes. Hello,</strong><br />
                     My name is
                     <span className="select">
-                        <select aria-label="Select name display preference" onChange={onNameChange}>
+                        <select aria-label="Select name display preference" onChange={onNameChange} tabIndex={0}>
                             {NAMES.map(name => (
                                 <option key={name}>{name}</option>
                             ))}

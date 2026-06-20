@@ -78,14 +78,23 @@ export default function Projects(): JSX.Element {
             <div className="menu">
                 {MENU_CONFIG.map((item) => {
                     const isActive = projectType === item.name;
+                    const handleAction = (e: React.MouseEvent | React.KeyboardEvent) => {
+                        if ('key' in e && e.key !== 'Enter' && e.key !== ' ') {
+                            return;
+                        }
+                        e.preventDefault();
+                        menu(item.name);
+                    };
                     return (
                         <div className={clsx('type tooltip --vertical sunken', { active: isActive })}
-                            onClick={() => menu(item.name)}
+                            onClick={handleAction}
+                            onKeyDown={handleAction}
                             key={item.name}
                             data-tooltip={item.name}
                             aria-label={`Projects for ${item.name}`}
                             aria-pressed={isActive}
                             role="button"
+                            tabIndex={0}
                         >
                             {item.icon != '' ? (
                                 <FontAwesomeIcon icon={item.icon as IconProp} />
@@ -99,25 +108,35 @@ export default function Projects(): JSX.Element {
             </div>
 
             <div className={clsx('projects', projectType)} >
-                {projects.map((project, index) => (
-                    <div
-                        className={clsx('project', { 'has': project.body })}
-                        key={index}
-                        data-type={project?.type}
-                        onClick={() => modal(index)}
-                        aria-label={`View details for ${project.title} by ${project.company}`}
-                        role="button"
-                        tabIndex={0}
-                    >
-                        <div className="photo">
-                            {project.photo && (<img src={`/assets/img/${project.photo}`} loading="lazy" alt={`${project.company} logo`} />)}
+                {projects.map((project, index) => {
+                    const hasBody = !!project.body;
+                    return (
+                        <div
+                            className={clsx('project', { 'has': hasBody })}
+                            key={index}
+                            data-type={project?.type}
+                            onClick={() => modal(index)}
+                            aria-label={`View details for ${project.title} by ${project.company}`}
+                            role={hasBody ? "button" : "presentation"}
+                            tabIndex={hasBody ? 0 : -1}
+                            onKeyDown={hasBody ? (e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    modal(index);
+                                }
+                            } : undefined}
+                        >
+                            <div className="photo">
+                                {project.photo && (<img src={`/assets/img/${project.photo}`} loading="lazy" alt={`${project.company} logo`} />)}
+                            </div>
+                            <div className="details">
+                                <p>{project.title}</p>
+                                <span>{project.company}</span>
+                            </div>
                         </div>
-                        <div className="details">
-                            <p>{project.title}</p>
-                            <span>{project.company}</span>
-                        </div>
-                    </div>
-                ))}
+                    )
+                }
+                )}
             </div>
         </>
     );

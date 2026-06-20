@@ -114,8 +114,8 @@ $types: all, js, vue, angular, react, wordpress, node;
 
         display: grid;
 
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
 
         cursor: pointer;
         transition: filter 550ms ease-in-out;
@@ -125,9 +125,20 @@ $types: all, js, vue, angular, react, wordpress, node;
 
         place-content: center;
 
+
+        svg {
+            height: 20px;
+
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+        }
+
         &:hover,
         &.active {
             background: var(--primary-color);
+
+            svg {
+                transform: rotate(15deg) scale(1.1);
+            }
         }
     }
 }

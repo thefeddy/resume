@@ -9,7 +9,9 @@ export default function Footer(): JSX.Element {
 
     return (
         <>
-            <footer data-copyright={copyright}></footer>
+            <footer data-copyright={copyright}>
+                <span className="build-tag">v2.0.0-PROD</span>
+            </footer>
         </>
     );
 }

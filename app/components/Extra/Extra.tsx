@@ -6,12 +6,18 @@ import ResumeSection from '~/components/ResumeSection/ResumeSection';
 import Modal from '../Modal/Modal';
 
 /* Inteface */
-import type { ModalState } from '../Modal/type/modal';
 
 /* React */
 import { useState, type JSX } from 'react'
 import { useGlobal } from '~/states/useGlobal';
 import type { Content } from '~/type/content.type';
+
+const PHOTOS = [
+    { title: 'P1S Printer', img: '3d-printer.jpg', alt: 'Bambu P1S 3D Printer' },
+    { title: 'My Computah', img: 'computer.jpg', alt: 'My machine' },
+    { title: 'Just some books', img: 'books.jpg', alt: 'Some of my books' }
+] as const;
+
 
 export default function Extra(): JSX.Element {
     const { darkmode } = useGlobal();
@@ -53,15 +59,14 @@ export default function Extra(): JSX.Element {
             </p>
             <p>While Javascript/Typescript may be my prefered coding language, I am always learning new ones. I am currently teaching myself Go + Beego.</p>
             <div className="photos">
-                <div className="photo" onClick={() => modal('P1S Printer', '/assets/img/personal/3d-printer.jpg')} >
-                    <img src="/assets/img/personal/3d-printer.jpg" alt="Bambu P1S 3D Printer" loading="lazy" />
-                </div>
-                <div className="photo" onClick={() => modal('My Computah', '/assets/img/personal/computer.jpg')} >
-                    <img src="/assets/img/personal/computer.jpg" alt="My machine" loading="lazy" />
-                </div>
-                <div className="photo" onClick={() => modal('Just some books', '/assets/img/personal/books.jpg')} >
-                    <img src="/assets/img/personal/books.jpg" alt="Some of my books" loading="lazy" />
-                </div>
+                {PHOTOS.map((item, index) => {
+                    const img = `/assets/img/personal/${item.img}`;
+                    return (
+                        <div className="photo" onClick={() => modal(item.title, img)} tabIndex={0} key={index}>
+                            <img src={img} alt={item.alt} loading="lazy" />
+                        </div>
+                    )
+                })}
             </div>
         </>
     );

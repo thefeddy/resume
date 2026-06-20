@@ -8,10 +8,18 @@ section {
     margin-bottom: 50px;
     padding: 50px 0 0 0;
 
-    border-bottom: 1px solid var(--section-bottom);
+    background-image: linear-gradient(to right,
+            var(--primary-color) 0%,
+            var(--primary-color) 60%,
+            transparent 60%,
+            transparent 100%);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 16px 2px;
 
     align-items: center;
     justify-content: center;
+
 
     &:nth-of-type(even) {
         .container {
@@ -89,11 +97,17 @@ section {
 
         width: 30%;
 
+        align-items: center;
+
+
+
         svg {
             position: relative;
             left: 20px;
 
             margin-left: auto;
+
+            cursor: pointer;
         }
     }
 

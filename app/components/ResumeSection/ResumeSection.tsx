@@ -56,6 +56,7 @@ export default function ResumeSection({ id, title, icon, aside, content, sounds 
                 <div className="container">
                     <div className="title">
                         <h1>{title}</h1>
+
                         <FontAwesomeIcon icon={icon} size="2xl" style={{ color: "#272727", }} onClick={() => play(sounds)} />
                     </div>
                     <div className="content" role="presentation">
@@ -67,7 +68,7 @@ export default function ResumeSection({ id, title, icon, aside, content, sounds 
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
         </>
     );
 }

@@ -1,24 +1,76 @@
 footer {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
-    height: 50px;
+    height: auto;
+    margin-top: 100px;
+
+    & {
+        font-size: 11px;
+
+        display: flex;
+        flex-direction: row;
+
+        width: 100%;
+        padding: 12px 15px;
+
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+
+        color: var(--text-muted, #666);
+        border-top: 1px dashed var(--section-bottom);
+
+        align-items: center;
+        justify-content: space-between;
+
+        &::before {
+            font-weight: 600;
+
+            content: 'SYS_STATUS: ACTIVE // LOC: ORLANDO_FL';
+        }
+
+        .build-tag {
+            font-weight: 600;
+
+            animation: console-pulse 3s infinite steps(2);
+
+            opacity: 0.8;
+            color: var(--primary-color);
+        }
+    }
 
     &::after {
-        font-size: 15px;
+        font-size: 13px;
+        font-weight: 500;
 
         display: flex;
 
         width: 100%;
-        height: 40px;
-        margin-top: auto;
+        height: 45px;
         padding-left: 15px;
 
-        content: '©Copyright ' attr(data-copyright) ' - David Friedrich';
+        content: '© ' attr(data-copyright) ' - DAVID FRIEDRICH';
+        letter-spacing: 1px;
+        text-transform: uppercase;
 
+        color: #fff !important;
         border-top: 1px solid var(--footer-border-top);
         background: var(--primary-color);
 
         align-items: center;
+    }
+}
+
+@keyframes console-pulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.9;
     }
 }
