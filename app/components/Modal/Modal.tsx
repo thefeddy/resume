@@ -21,22 +21,41 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
 
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+
     const navText = isExpanded ? 'Close Images' : 'View Images';
     const totalImages = content?.images?.length || 0;
     const currentImage = type === 'project' ? content?.images?.[currentIndex] : undefined;
 
+    const preloadImage = (src: string) => {
+        if (!src) return;
+        const img = new Image();
+        img.src = `/assets/img/${src}`;
+
+    };
+
     useEffect(() => {
         if (!isOpen) return;
-        const handleKeyDown = (event: KeyboardEvent) => {
 
+        if (content?.images) {
+            for (let image of content?.images) {
+                preloadImage(image);
+            }
+        }
+
+        const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === 'Escape' || event.key === 'Esc') {
                 handleClose();
             }
         };
+
         window.addEventListener('keydown', handleKeyDown);
+
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
+
+
     }, [isOpen, onClose]);
 
     if (!isOpen) return null;
@@ -62,8 +81,61 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
         onClose();
     };
 
+    const youtubeEmbed = (embedId: string) => (
+        <div className="video">
+            <iframe
+                className="yt-embed"
+                src={`https://www.youtube.com/embed/${embedId}`}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+            ></iframe>
+        </div>
+    )
+
+
+
+    const images = () => (
+        <div className="images-wrapper">
+            <button className="prev sunken" onClick={prevSlide}>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                >
+                    <path d="m15 18-6-6 6-6" />
+                </svg>
+            </button>
+
+            <img src={`assets/img/${currentImage}`} alt="Gallery" />
+
+            <button className="next sunken" onClick={nextSlide}>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                >
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+            </button>
+        </div>
+    );
+
     return (
-        <div className={clsx('modal', type, { 'open': isOpen })} onClick={handleClose}>
+        <div className={clsx('modal', type, { 'open': isOpen }, { expanded: isExpanded })} onClick={handleClose}>
             <div className="body" onClick={(e) => e.stopPropagation()}>
                 <div className="header">
                     <h1>{content?.title}</h1>
@@ -72,77 +144,38 @@ export default function Modal({ content, onClose, isOpen, type }: ModalProps): J
                 <div className="sub">
                     {content?.company}
                 </div>
-                <div className={clsx('modal-content', { expanded: isExpanded })}>
+                <div className="modal-content">
                     {type == 'project' ? (
                         <>
                             {content?.youtube && (
-                                <div className="video">
-                                    <iframe
-                                        className="yt-embed"
-                                        src={`https://www.youtube.com/embed/${content.youtube}`}
-                                        title="YouTube video player"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerPolicy="strict-origin-when-cross-origin"
-                                        allowFullScreen
-                                    ></iframe>
-                                </div>
+                                youtubeEmbed(content.youtube)
                             )}
-                            <div>
-                                {content?.body ? parse(content.body) : null}
-                                {content?.tech && (
-                                    <div className="list">
-                                        {content.tech.map((item, index) => (
-                                            <div className={`tech bg-${item.toLowerCase().replace(/[^a-z0-9]/g, '')}`} key={index}>
-                                                {item}
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-                            {totalImages > 0 && (
-                                <div className={clsx('images-wrapper', { expanded: isExpanded })}>
-                                    <button className="prev sunken" onClick={prevSlide}>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        >
-                                            <path d="m15 18-6-6 6-6" />
-                                        </svg>
-                                    </button>
-
-                                    <img src={`assets/img/${currentImage}`} alt="Gallery" />
-                                    <button className="next sunken" onClick={nextSlide}>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        >
-                                            <path d="m9 18 6-6-6-6" />
-                                        </svg>
-                                    </button>
+                            {!isExpanded ? (
+                                <div className="json-content">
+                                    {content?.body ? parse(content.body) : null}
+                                    {content?.tech && (
+                                        <div className="list">
+                                            {content.tech.map((item, index) => (
+                                                <div className={`tech bg-${item.toLowerCase().replace(/[^a-z0-9]/g, '')}`} key={index}>
+                                                    {item}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
                                 </div>
+                            ) : (
+                                images()
                             )}
                         </>
                     ) : (
-                        <>{content?.photo && <img src={content?.photo} alt="" />}</>
+                        <>
+                            {content?.photo && <img src={content?.photo} alt="" />}
+                        </>
                     )}
                 </div>
             </div>
             {content?.images && content.images.length > 0 && (
-                <div className={clsx('modal-nav', { expanded: isExpanded })} onClick={(e) => e.stopPropagation()}>
+                <div className="modal-nav" onClick={(e) => e.stopPropagation()}>
                     <p>Showing image <strong>{currentIndex + 1}</strong> of <strong>{totalImages}</strong></p>
                     <button onClick={viewImages} className="sunken">{navText}</button>
                 </div>

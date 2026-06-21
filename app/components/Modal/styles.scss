@@ -19,6 +19,28 @@
     backdrop-filter: blur(20px) saturate(180%);
     place-content: center;
 
+    &.expanded {
+        .images-wrapper {
+            visibility: visible;
+
+            max-height: 500px;
+            padding: 20px 0;
+
+            opacity: 1;
+        }
+
+        .modal-nav {
+            p {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            height: 500px;
+        }
+    }
+
+
     &.image {
         .modal-content {
             text-align: center;
@@ -94,10 +116,6 @@
 
             transition: height 550ms ease-in-out;
 
-            &.expanded {
-                height: 500px;
-            }
-
             .video {
                 width: 100%;
                 height: 400px;
@@ -154,10 +172,6 @@
     }
 
     .images-wrapper {
-        position: absolute;
-        top: 80px;
-        left: 0;
-
         display: flex;
         visibility: hidden;
         overflow: hidden;
@@ -199,16 +213,6 @@
         }
 
 
-        &.expanded {
-            visibility: visible;
-
-            max-height: 500px;
-            padding: 20px 0;
-
-            opacity: 1;
-        }
-
-
         img {
             width: auto;
             max-height: 450px;
@@ -230,11 +234,7 @@
 
         align-items: center;
 
-        &.expanded {
-            p {
-                opacity: 1;
-            }
-        }
+
 
         p {
             margin: 0 0 0 20px;
@@ -249,6 +249,10 @@
             border: none;
             border-left: 1px solid black;
             background: var(--primary-color);
+
+            &.loading {
+                display: none;
+            }
         }
     }
 }
